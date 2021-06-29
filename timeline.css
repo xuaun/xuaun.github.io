@@ -23,7 +23,7 @@ body {
   content: '';
   position: absolute;
   width: 2px;
-  background: #1ff22a;
+  background: #ffa500;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -53,7 +53,7 @@ body {
   top: calc(50% - 8px);
   right: -8px;
   background: #ffffff;
-  border: 2px solid #1ff22a;
+  border: 2px solid #ffa500;
   border-radius: 16px;
   z-index: 1;
 }
@@ -69,7 +69,7 @@ body {
   height: 2px;
   top: calc(50% - 1px);
   right: 8px;
-  background: #1ff22a;
+  background: #ffa500;
   z-index: 1;
 }
 
@@ -84,7 +84,7 @@ body {
   text-align: center;
   font-size: 14px;
   font-weight: bold;
-  color: #1ff22a;
+  color: #ffa500;
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
@@ -106,11 +106,11 @@ body {
   padding: 9px 0;
   top: calc(50% - 20px);
   background: #402020;
-  border: 2px solid #1ff22a;
+  border: 2px solid #ffa500;
   border-radius: 40px;
   text-align: center;
   font-size: 18px;
-  color: #1ff22a;
+  color: #ffa500;
   z-index: 1;
 }
 
@@ -138,14 +138,14 @@ body {
   margin: 0 0 10px 0;
   font-size: 18px;
   font-weight: normal;
-  color: #1ff22a;
+  color: #ffa500;
 }
 
 .container .content h3 {
   margin: 0 0 10px 0;
   font-size: 15px;
   font-weight: normal;
-  color: #1ff22a;
+  color: #ffa500;
 }
 
 .container .content p {
@@ -178,7 +178,7 @@ body {
   .container.left::before,
   .container.right::before {
     left: 100px;
-    border-color: transparent #1ff22a transparent transparent;
+    border-color: transparent #ffa500 transparent transparent;
   }
 
   .container.left .date,

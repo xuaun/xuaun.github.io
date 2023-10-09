@@ -1,6 +1,6 @@
 # xuaun.github.io
 My personal github pages.
 
-Page inspired by [Henrique Hiram](https://github.com/henriquenunez/henriquenunez.github.io).
+This page was inspired by [Henrique Hiram](https://github.com/henriquenunez/henriquenunez.github.io).
 
-Timeline made with [this](https://codepen.io/htmlcodex/pen/LYGjPgV).
+The timeline was made with the code at this [link](https://codepen.io/htmlcodex/pen/LYGjPgV).

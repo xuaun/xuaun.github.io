@@ -440,7 +440,7 @@ body.offcanvas {
 
 .hire {
   padding: 2em;
-  background: #f9bf3f; }
+  background: rgba(255,114,0,0.8); }
   .hire h2 {
     line-height: 1.5; }
   .hire .btn-hire {
@@ -1395,7 +1395,9 @@ body.offcanvas {
   @media screen and (max-width: 768px) {
     .colorlib-nav-toggle {
       opacity: 1;
-      visibility: visible; } }
+      visibility: visible;
+      background: content-box rgba(255, 255, 255, 0.8);
+      border-radius: 23px; } }
 
 @media screen and (max-width: 480px) {
   .col-xxs-12 {

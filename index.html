@@ -1,27 +1,848 @@
-<html>
-	<head>
-	  <link rel="stylesheet" href="style.css">
-	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-  <body>
-    <div class="nav">
-      <a href="./index.html">Home</a>
-      <a href="./timeline.html">Timeline</a>
-      <a href="./videos.html">Videos</a>
-      <!--a href="./projects.html">Projects</a-->
-      <div class="nav-right">
-        <a href="https://github.com/xuaun">GitHub</a>
-        <a href="https://www.youtube.com/channel/UC2Xy8Y2IQhl-_jywNMHEqRg">Youtube</a>
-        <a href="./contact.html">Contact</a>
-      </div>
-    </div>
-    
-    <div class="main-content">
-        <p>Hi, my name is João Lima. I am a Special Education Master's Student at UFSCar.</p>
-        <p>I currently work as a researcher, in the field of
-          <a class="link" href="https://en.wikipedia.org/wiki/Mathematical_anxiety">
-          Mathematical anxiety.</a></p>
-    </div>
-  </body>
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>João Víctor Lima - Portfólio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="css/flexslider.css">
+    <!-- Flaticons  -->
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<body>
+    <div id="colorlib-page">
+        <div class="container-wrap">
+            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar"><i></i></a>
+            <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+                <div class="text-center">
+                    <div class="author-img" style="background-image: url(images/about.png);"></div>
+                    <h1 id="colorlib-logo"><a href="index.html">João Víctor <br>de Araujo Lima</a></h1>
+                    <span class="position"><a href="#">Analista de dados | <br>Pesquisador de UX</a></span>
+                </div>
+                <nav id="colorlib-main-menu" role="navigation" class="navbar">
+                    <div id="navbar" class="collapse">
+                        <ul>
+                            <li class="active"><a href="#" data-nav-section="home">Página Inicial</a></li>
+                            <li><a href="#" data-nav-section="about">Sobre mim</a></li>
+                            <li><a href="#" data-nav-section="skills">Habilidades e competências</a></li>
+                            <li><a href="#" data-nav-section="education">Trajetória acadêmica</a></li>
+                            <li><a href="#" data-nav-section="experience">Experiências profissionais</a></li>
+                            <li><a href="#" data-nav-section="work">Projetos profissionais</a></li>
+                            <li><a href="#" data-nav-section="blog">Outros projetos</a></li>
+                            <li><a href="#" data-nav-section="contact">Contato</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </aside>
+
+            <div id="colorlib-main">
+                <section id="colorlib-hero" class="js-fullheight" data-section="home">
+                    <div class="flexslider js-fullheight">
+                        <ul class="slides">
+                            <li style="background-image: url(images/img_bg_1.jpg);">
+                                <div class="overlay"></div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div
+                                            class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                                            <div class="slider-text-inner js-fullheight">
+                                                <div class="desc">
+                                                    <h1>Olá! Me chamo <br>João Víctor de Araujo Lima</h1>
+                                                    <h2><strong>Seja bem vindo ao meu portfólio digital, para mais informações, fique a vontade para acessar a <a
+                                                            href="https://www.linkedin.com/in/joao-victor-araujo-lima/?locale=pt_BR"
+                                                            target="_blank">minha página do Linkedin</a>.</strong></h2>
+                                                    <p><a class="btn btn-primary btn-learn">Baixe aqui o meu currículo <i
+                                                                class="icon-download4"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="background-image: url(images/img_bg_2.jpg);">
+                                <div class="overlay"></div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div
+                                            class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                                            <div class="slider-text-inner">
+                                                <div class="desc">
+                                                    <h1>Eu sou: <br>Analista/Cientista de Dados <br>Pesquisador de UX</h1>
+                                                    <h2><strong>Também atuo como Pesquisador, Educador e Analista de Acessibilidade.</strong></h2>
+                                                    <p><a class="btn btn-primary btn-learn">Veja meu Portfólio <i
+                                                                class="icon-briefcase3"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="colorlib-about" data-section="about">
+                    <div class="colorlib-narrow-content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                                    <div class="col-md-12">
+                                        <div class="about-desc">
+                                            <span class="heading-meta">Sobre mim</span>
+                                            <h2 class="colorlib-heading">Quem sou eu?</h2>
+                                            <p><strong>Olá, me chamo João Víctor</strong>. 
+                                            Sou apaixonado por pesquisa e inovação! Tenho experiência em pesquisas quantitativas e qualitativas, navegando entre diferentes áreas do conhecimento para isso, como Ciências Exatas (Física, Química e Matemática), Programação, Educação (e Educação Especial) e Experiência do Usuário.</p>
+                                            <p>Estou sempre estudando e aprendendo coisas novas, como em minha certificação recente de Cloud Digital Leader (Google), e tento sempre estar atualizado nas áreas que possuo maior domínio, como pesquisa e desenvolvimento, diversidade e inclusão, acessibilidade digital e tecnologias assistivas, além das áreas de pesquisa em experiência do usuário e análise e ciência de dados.</p>
+                                            <p>Ultimamente tenho focado em melhorar minhas habilidades de pesquisa, nuvem (cloud) e ciência de dados usando SQL (PostgreSQL), BI (Microsoft Power BI), R e Python - com enfoque em visualização de dados, análise estatística, aprendizagem de máquina (ML) e inteligência artificial (AI).</p>
+                                            <p>Fiquem à vontade para entrar em contato comigo.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="services color-1">
+                                            <span class="icon2"><i class="icon-bar-graph-2"></i></span>
+                                            <h3>Analista/Cientista de dados</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+                                        <div class="services color-2">
+                                            <span class="icon2"><i class="icon-phone3"></i></span>
+                                            <h3>Pesquisador de Experiência do Usuário - UXR</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
+                                        <div class="services color-3">
+                                            <span class="icon2"><i class="icon-device-desktop"></i></span>
+                                            <h3>Analista de Acessibilidade Digital</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+                                        <div class="services color-4">
+                                            <span class="icon2"><i class="icon-puzzle-outline"></i></span>
+                                            <h3>Pesquisador e Educador</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="hire">
+                                            <h2>Texto chamativo <br>Não entendi essa parte!</h2>
+                                            <a href="#" class="btn-hire">Entre em contato comigo!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="colorlib-services" data-section="services">
+                    <div class="colorlib-narrow-content">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                                data-animate-effect="fadeInLeft">
+                                <span class="heading-meta">O que eu sei fazer?</span>
+                                <h2 class="colorlib-heading">Aqui estão algumas habilidades e competências minhas</h2>
+                            </div>
+                        </div>
+                        <div class="row row-pt-md">
+                            <div class="col-md-4 text-center animate-box">
+                                <div class="services color-1">
+                                    <span class="icon">
+                                        <i class="icon-bulb"></i>
+                                    </span>
+                                    <div class="desc">
+                                        <h3>Skill 1</h3>
+                                        <p>Skill 1 descrição</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center animate-box">
+                                <div class="services color-2">
+                                    <span class="icon">
+                                        <i class="icon-data"></i>
+                                    </span>
+                                    <div class="desc">
+                                        <h3>Skill 2</h3>
+                                        <p>Skill 2 descrição</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center animate-box">
+                                <div class="services color-3">
+                                    <span class="icon">
+                                        <i class="icon-phone3"></i>
+                                    </span>
+                                    <div class="desc">
+                                        <h3>Skill 3</h3>
+                                        <p>Skill 3 descrição</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center animate-box">
+                                <div class="services color-4">
+                                    <span class="icon">
+                                        <i class="icon-layers2"></i>
+                                    </span>
+                                    <div class="desc">
+                                        <h3>Skill 4</h3>
+                                        <p>Skill 4 descrição</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center animate-box">
+                                <div class="services color-5">
+                                    <span class="icon">
+                                        <i class="icon-data"></i>
+                                    </span>
+                                    <div class="desc">
+                                        <h3>Skill 5</h3>
+                                        <p>Skill 5 descrição</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center animate-box">
+                                <div class="services color-6">
+                                    <span class="icon">
+                                        <i class="icon-phone3"></i>
+                                    </span>
+                                    <div class="desc">
+                                        <h3>Skill 6</h3>
+                                        <p>Skill 6 descrição</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="colorlib-skills" data-section="skills">
+                    <div class="colorlib-narrow-content">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                                data-animate-effect="fadeInLeft">
+                                <span class="heading-meta">O que sei fazer?</span>
+                                <h2 class="colorlib-heading animate-box">Meus conhecimentos técnicos</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                <p>Breve descrição técnica (?).</p>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="progress-wrap">
+                                    <h3>Photoshop</h3>
+                                    <div class="progress">
+                                        <div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                            <span>75%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                                <div class="progress-wrap">
+                                    <h3>jQuery</h3>
+                                    <div class="progress">
+                                        <div class="progress-bar color-2" role="progressbar" aria-valuenow="60"
+                                            aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                            <span>60%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="progress-wrap">
+                                    <h3>HTML5</h3>
+                                    <div class="progress">
+                                        <div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
+                                            aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                            <span>85%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                                <div class="progress-wrap">
+                                    <h3>CSS3</h3>
+                                    <div class="progress">
+                                        <div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+                                            aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                            <span>90%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="progress-wrap">
+                                    <h3>WordPress</h3>
+                                    <div class="progress">
+                                        <div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
+                                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                            <span>70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                                <div class="progress-wrap">
+                                    <h3>SEO</h3>
+                                    <div class="progress">
+                                        <div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+                                            aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                            <span>80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="colorlib-education" data-section="education">
+                    <div class="colorlib-narrow-content">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                                data-animate-effect="fadeInLeft">
+                                <span class="heading-meta">O que estudei?</span>
+                                <h2 class="colorlib-heading animate-box">Minha trajetória acadêmica</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="fancy-collapse-panel">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion"
+                                                        href="#collapseOne" aria-expanded="true"
+                                                        aria-controls="collapseOne">Mestrado em Educação Especial
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                                aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p>Estudei e desenvolvi materiais acadêmicos sobre os temas: "Concepções sobre Deficiência", "Política em Educação Especial", "Estigma e Identidade Social do Deficiente", entre outros.
+                                                                Além disso, participei de inúmeros eventos (nacionais e internacionais) e disciplinas relacionadas às temáticas de inclusão e acessibilidade, diversidade social, racial e cultural nas ciências e de estudos sobre neurociências aplicadas à inclusão e acessibilidade.
+                                                                Bolsista CNPq (parcial). </p>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p>Atividades e grupos: Grupo de Pesquisa: Surdez e Abordagem Bilíngue (GPSABilíngue).
+                                                                Grupo de Pesquisa em Educação de Surdos, Subjetividades e Diferenças (GPESDi).
+                                                                Grupo de Estudos: Surdez e Diferenças em pauta (GEDISp).
+                                                                Monitor na disciplina "Linguagem, Surdez e Educação" para o curso Bacharel em Tradução e Interpretação em Libras | Língua Portuguesa - UFSCar.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                        href="#collapseTwo" aria-expanded="false"
+                                                        aria-controls="collapseTwo">Certificado de ênfase em computação (nível graduação)
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                                aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    <p>Descrição da Graduação - paragrafo 1. <strong>aaa</strong>, aaaaaa.</p>
+                                                    <ul>
+                                                        <li>tópicos :o</li>
+                                                        <li>Sim!</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                        href="#collapseThree" aria-expanded="false"
+                                                        aria-controls="collapseThree">Graduação em Ciências Exatas
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                                aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <p>Far far away, behind the word <strong>mountains</strong>, far
+                                                        from the countries Vokalia and Consonantia, there live the blind
+                                                        texts. Separated they live in Bookmarksgrove right at the coast
+                                                        of the Semantics, a large language ocean.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingFour">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+                                                        href="#collapseFour" aria-expanded="false"
+                                                        aria-controls="collapseFour">Outros diplomas e certificados
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                                                aria-labelledby="headingFour">
+                                                <div class="panel-body">
+                                                    <p>Far far away, behind the word <strong>mountains</strong>, far
+                                                        from the countries Vokalia and Consonantia, there live the blind
+                                                        texts. Separated they live in Bookmarksgrove right at the coast
+                                                        of the Semantics, a large language ocean.</p>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="colorlib-experience" data-section="experience">
+                    <div class="colorlib-narrow-content">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                                data-animate-effect="fadeInLeft">
+                                <span class="heading-meta">Experiências</span>
+                                <h2 class="colorlib-heading animate-box">Experiência profissional</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="timeline-centered">
+                                    <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="timeline-entry-inner">
+
+                                            <div class="timeline-icon color-1">
+                                                <i class="icon-pen2"></i>
+                                            </div>
+
+                                            <div class="timeline-label">
+                                                <h2><a href="#">Pesquisador - UX | Dados | Acessibilidade na Fundação de Apoio ao IPT (FIPT)</a> <span>2021-atual</span></h2>
+                                                <p>Pesquisador em projeto de Pesquisa e Desenvolvimento (P&D) de software e atuante na área de Acessibilidade e Inclusão, com foco na inclusão de surdos falantes da Língua Brasileira de Sinais (Libras), ambos na Fundação de Apoio ao IPT (FIPT).
+                                                    Minha principal função atualmente é como membro representante da equipe de Experiência do Usuário (UX) como pesquisador de UX. Para isso, também tenho realizado trabalhos com dados estatísticos públicos do IBGE (Censo e PNS).
+                                                    Neste processo, tive contato com a metodologia ágil, fazendo uso de ferramentas como Jira e Confluence, e mantendo contato direto com o líder ágil para entender melhor os conceitos e práticas adotadas nos projetos que estou inserido.
+                                                    Outras atividades que tenho desenvolvido são: Participação em falas e apresentações em inglês para a equipe de “Product Diversity Office (PDO)” da Lenovo; Participação como membro em equipes de Diversidade & Inclusão do IPT e da Lenovo; Participação ativa na criação de soluções inovadoras e de pesquisas em minha área de atuação.</p>
+                                            </div>
+                                        </div>
+                                    </article>
+
+
+                                    <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+                                        <div class="timeline-entry-inner">
+                                            <div class="timeline-icon color-2">
+                                                <i class="icon-pen2"></i>
+                                            </div>
+                                            <div class="timeline-label">
+                                                <h2><a href="#">Pesquisador - Mestrado acadêmico | Bolsista pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico</a>
+                                                    <span>2020-2021</span></h2>
+                                                <p>Pesquisador de Mestrado Acadêmico de projeto intitulado "Reflexões e possibilidades sobre a quantificação dos surdos sinalizantes nos levantamentos censitários brasileiros". Bolsista CNPq até 2021.
+                                                    Iniciei meu Mestrado em 2020, ano que iniciou a pandemia de Covid-19. Meus estudos continuariam seguindo a discussão sobre Ansiedade à Matemática em alunos surdos, mas acabou se modificando ao longo do tempo.
+                                                    Atualmente pesquiso conceitos da Educação Especial e das Ciências Sociais, focando nas representações dos surdos e da Libras nos levantamentos censitários brasileiros.
+                                                    Pude continuar me desenvolvendo enquanto pesquisador, encontrando outras possibilidades de fazer pesquisa, mesmo nas adversidades encontradas ao longo desta trajetória acadêmica.</p>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="timeline-entry-inner">
+                                            <div class="timeline-icon color-3">
+                                                <i class="icon-pen2"></i>
+                                            </div>
+                                            <div class="timeline-label">
+                                                <h2><a href="#">Pesquisador - Iniciação Científica | Bolsista pela Fundação de Amparo à Pesquisa do Estado de São Paulo</a> <span>2019-2019</span></h2>
+                                                <p>Bolsista FAPESP de Iniciação Científica em projeto de pesquisa intitulado: "Aplicação de escala de ansiedade à matemática em alunos surdos do estado de São Paulo".
+                                                    A partir deste projeto pude apresentar os achados de pesquisa em diversos eventos nacionais e internacionais, além de realizar a aplicação de um questionário (survey do tipo Likert) presencial para mais de 100 participantes surdos na capital paulista, de maneira autônoma e eficiente. 
+                                                    Durante o desenvolvimento deste projeto eu pude desenvolver minhas habilidades de pesquisador, assim como de cientista de dados, realizando a coleta, tratamento e análise qualitativa e estatística dos achados desta pesquisa.
+                                                    Alguns achados que considero essenciais que pude verificar com este projeto foram: a importância da inclusão e da acessibilidade dos surdos, principalmente em escolas bilíngues (Libras | Português); E a importância da Libras enquanto língua de instrução nestes espaços educacionais para garantir a aprendizagem pelos alunos surdos.</p>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+                                        <div class="timeline-entry-inner">
+                                            <div class="timeline-icon color-4">
+                                                <i class="icon-pen2"></i>
+                                            </div>
+                                            <div class="timeline-label">
+                                                <h2><a href="#">Bolsista de "Ensino e Pesquisa de Programação" pela Universidade de São Paulo</a> <span>2017-2018</span></h2>
+                                                <p>Bolsista no projeto de ensino e pesquisa intitulado: "Laboratório de introdução à programação para alunos do ensino fundamental".
+                                                    Neste projeto pude lecionar programação e robótica para alunos dos anos finais do Ensino Fundamental de escolas públicas. 
+                                                    As principais atividades desenvolvidas foram: escolha de conteúdos, planejamento do cronograma de aulas, ensino de linguagens de "programação visual" (Code.org e Scratch) e programação de Arduino.
+                                                    Pude desenvolver habilidades de trabalho em equipe, didática e de apresentação.</p>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="timeline-entry-inner">
+                                            <div class="timeline-icon color-5">
+                                                <i class="icon-pen2"></i>
+                                            </div>
+                                            <div class="timeline-label">
+                                                <h2><a href="#">Bolsista de "Ensino e Pesquisa de Matemática" pela Universidade de São Paulo</a> <span>2016-2017</span></h2>
+                                                <p>Bolsista no projeto de ensino e pesquisa intitulado: "Planejando atividades diferenciadas sobre tratamento da informação na escola pública".
+                                                    Neste projeto pude me aprofundar em como a área de tratamento da informação era ensinada nas escolas públicas e, a partir disso, preparar materiais e discussões para serem levadas em sala de aula, para alunos dos anos finais do Ensino Fundamental e do Ensino Médio.
+                                                    Pude desenvolver habilidades de pesquisa, trabalho em equipe, desenvolvimento de relatórios, preparação de materiais para ensino, didática e apresentação.</p>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="timeline-entry begin animate-box"
+                                        data-animate-effect="fadeInBottom">
+                                        <div class="timeline-entry-inner">
+                                            <div class="timeline-icon color-none">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="colorlib-work" data-section="work">
+                    <div class="colorlib-narrow-content">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                                data-animate-effect="fadeInLeft">
+                                <span class="heading-meta">Projetos profissionais que fiz ou participei</span>
+                                <h2 class="colorlib-heading animate-box">Trabalhos recentes</h2>
+                            </div>
+                        </div>
+                        <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                            <div class="col-md-12">
+                                <p class="work-menu"><span><a href="#" class="active">Graphic Design</a></span> <span><a
+                                            href="#">Web Design</a></span> <span><a href="#">Software</a></span>
+                                    <span><a href="#">Apps</a></span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="project" style="background-image: url(images/img-1.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 01</a></h3>
+                                            <span>Website</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                                <div class="project" style="background-image: url(images/img-2.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 02</a></h3>
+                                            <span>Animation</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+                                <div class="project" style="background-image: url(images/img-3.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 03</a></h3>
+                                            <span>Illustration</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+                                <div class="project" style="background-image: url(images/img-4.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 04</a></h3>
+                                            <span>Application</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="project" style="background-image: url(images/img-5.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 05</a></h3>
+                                            <span>Graphic, Logo</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                                <div class="project" style="background-image: url(images/img-6.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 06</a></h3>
+                                            <span>Web Design</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 animate-box">
+                                <p><a href="#" class="btn btn-primary btn-lg btn-load-more">Load more <i
+                                            class="icon-reload"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="colorlib-blog" data-section="blog">
+                    <div class="colorlib-narrow-content">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                                data-animate-effect="fadeInLeft">
+                                <span class="heading-meta">Outros projetos que fiz ou participei</span>
+                                <h2 class="colorlib-heading animate-box">Projetos pessoais e acadêmicos</h2>
+                            </div>
+                        </div>
+                        <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                            <div class="col-md-12">
+                                <p class="work-menu"><span><a href="#" class="active">Graphic Design</a></span> <span><a
+                                            href="#">Web Design</a></span> <span><a href="#">Software</a></span>
+                                    <span><a href="#">Apps</a></span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="project" style="background-image: url(images/img-1.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 01</a></h3>
+                                            <span>Website</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                                <div class="project" style="background-image: url(images/img-2.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 02</a></h3>
+                                            <span>Animation</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+                                <div class="project" style="background-image: url(images/img-3.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 03</a></h3>
+                                            <span>Illustration</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+                                <div class="project" style="background-image: url(images/img-4.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 04</a></h3>
+                                            <span>Application</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="project" style="background-image: url(images/img-5.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 05</a></h3>
+                                            <span>Graphic, Logo</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                                <div class="project" style="background-image: url(images/img-6.jpg);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3><a href="work.html">Work 06</a></h3>
+                                            <span>Web Design</span>
+                                            <p class="icon">
+                                                <span><a href="#"><i class="icon-share3"></i></a></span>
+                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
+                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 animate-box">
+                                <p><a href="#" class="btn btn-primary btn-lg btn-load-more">Load more <i
+                                            class="icon-reload"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="colorlib-contact" data-section="contact">
+                    <div class="colorlib-narrow-content">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                                data-animate-effect="fadeInLeft">
+                                <span class="heading-meta">Entre em contato comigo</span>
+                                <h2 class="colorlib-heading">Contato</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="colorlib-feature colorlib-feature-sm animate-box"
+                                    data-animate-effect="fadeInLeft">
+                                    <div class="colorlib-icon">
+                                        <i class="icon-globe-outline"></i>
+                                    </div>
+                                    <div class="colorlib-text">
+                                        <p><a href="#">lima.jva@gmail.com</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="colorlib-feature colorlib-feature-sm animate-box"
+                                    data-animate-effect="fadeInLeft">
+                                    <div class="colorlib-icon">
+                                        <i class="icon-map"></i>
+                                    </div>
+                                    <div class="colorlib-text">
+                                        <p>São Carlos - SP - Brasil</p>
+                                    </div>
+                                </div>
+
+                                <div class="colorlib-feature colorlib-feature-sm animate-box"
+                                    data-animate-effect="fadeInLeft">
+                                    <div class="colorlib-icon">
+                                        <i class="icon-phone"></i>
+                                    </div>
+                                    <div class="colorlib-text">
+                                        <p><a href="tel://">+55 (12) 9 8899-4094</a></p> <!-- Talvez mudar pra link whats? -->
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </section>
+
+            </div><!-- end:colorlib-main -->
+        </div><!-- end:container-wrap -->
+    </div><!-- end:colorlib-page -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Flexslider -->
+    <script src="js/jquery.flexslider-min.js"></script>
+    <!-- Owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Counters -->
+    <script src="js/jquery.countTo.js"></script>
+
+
+    <!-- MAIN JS -->
+    <script src="js/main.js"></script>
+
+</body>
+
 </html>

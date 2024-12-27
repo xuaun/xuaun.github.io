@@ -1216,18 +1216,18 @@ body.offcanvas {
       color: #fff; }
 
 .btn-info {
-  background: #5bc0de;
+  background: rgba(255,114,0,0.8);
   color: #fff;
-  border: 2px solid #5bc0de; }
+  border: 2px solid rgba(255,114,0,0.8); }
   .btn-info:hover, .btn-info:focus, .btn-info:active {
-    background: #46b8da !important;
-    border-color: #46b8da !important; }
+    background: rgba(255,114,0,1) !important;
+    border-color: rgba(255,114,0,1) !important; }
   .btn-info.btn-outline {
     background: transparent;
-    color: #5bc0de;
-    border: 2px solid #5bc0de; }
+    color: rgba(255,114,0,0.8);
+    border: 2px solid rgba(255,114,0,0.8); }
     .btn-info.btn-outline:hover, .btn-info.btn-outline:focus, .btn-info.btn-outline:active {
-      background: #5bc0de;
+      background: rgba(255,114,0,1);
       color: #fff; }
 
 .btn-warning {

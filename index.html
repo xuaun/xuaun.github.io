@@ -50,6 +50,12 @@
                 <nav id="colorlib-main-menu" role="navigation" class="navbar">
                     <div id="navbar" class="collapse">
                         <ul>
+                            <div class="language-selector">
+                                <button class="btn-info" onclick="changeLanguage('en')">English</button>
+                                <button class="btn-info" onclick="changeLanguage('pt')">Português</button>
+                                <button class="btn-info" onclick="changeLanguage('fr')">Français</button>
+                            </div>
+                            <br>
                             <li class="active"><a href="#" data-nav-section="home">Página Inicial</a></li>
                             <li><a href="#" data-nav-section="about">Sobre mim</a></li>
                             <li><a href="#" data-nav-section="services">Habilidades e competências</a></li>
@@ -58,6 +64,33 @@
                             <li><a href="#" data-nav-section="work">Projetos profissionais</a></li>
                             <li><a href="#" data-nav-section="blog">Outros projetos</a></li>
                             <li><a href="#" data-nav-section="contact">Contato</a></li>
+                            <br>
+                        </ul>
+                    </div>
+                    
+                    <div class="collapse">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/joao-victor-araujo-lima/?locale=pt_BR" target="_blank" class="btn-lg icon-linkedin2"></a> •
+                                <a href="https://github.com/xuaun" target="_blank" class="btn-lg icon-github"></a> •
+                                <a href="https://www.datacamp.com/portfolio/joaovictor-ne" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" aria-label="DataCamp" role="img" viewBox="0 0 512 512" width="20px" height="20px" fill="#000000">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    
+                                    <g id="SVGRepo_iconCarrier">
+                                    
+                                    <rect width="512" height="512" rx="15%" fill="#05192d"/>
+                                    
+                                    <path fill="#03EF62" d="m273.2 378.4v-95.3l150.4-85.8-36.6-20.9-113.8 64.9v-95.7c0-6.4-3.5-12.5-9.1-15.7L127.2 51.3a26.1 26.1 90 00-26.5.8A26.1 26.1 90 0088.4 74.4v268.9c0 9.1 4.6 17.5 12.3 22.3a26 26 90 0026.5.8l109.7-62.6V389c0 6.5 3.6 12.6 9.2 15.8l140.7 80.1 36.6-21-150.2-85.5zm-36.3-222.2V262l-112.2 64V91.8l112.2 64.4z"/>
+                                    
+                                    </g>
+                                    
+                                    </svg>
+                                </a> •
+                                <a href="https://www.youtube.com/@xuaun/" target="_blank" class="btn-lg icon-youtube"></a> •
+                                <a href="https://bit.ly/UXR-Portfolio_Joao-Victor-de-Araujo-Lima" target="_blank" class="btn-lg icon-attachment-outline"></a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -279,7 +312,6 @@
                                                                     <li>Análises estatística, histórica e documental de dados censitários brasileiros sobre a população surda,</li>
                                                                     <li>Pesquisa acadêmica em literatura científica e documental sobre surdez e línguas de sinais,</li>
                                                                     <li>Análises de produções acadêmicas, científicas e de mídias sociais sobre conteúdos de acessibilidade.</li>
-                                                                    <li>Entre outros...</li>
                                                                 </ul> </p>
                                                         </div>
                                                         <div class="col-md-6">
@@ -287,8 +319,7 @@
                                                                 <ul>
                                                                     <li>Concepções sobre Deficiência,</li>
                                                                     <li>Política em Educação Especial,</li>
-                                                                    <li>Estigma e Identidade Social do Deficiente,</li>
-                                                                    <li>Entre outros...</li>
+                                                                    <li>Estigma e Identidade Social do Deficiente.</li>
                                                                 </ul>
                                                             Além disso, participei de inúmeros eventos (nacionais e internacionais) e disciplinas relacionadas às temáticas de inclusão e acessibilidade, diversidade social, racial e cultural nas ciências e de estudos sobre neurociências aplicadas à inclusão e acessibilidade.</p>
                                                         </div>
@@ -308,11 +339,9 @@
                                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
                                                 aria-labelledby="headingTwo">
                                                 <div class="panel-body">
-                                                    <p>Descrição da Graduação - paragrafo 1. <strong>aaa</strong>, aaaaaa.</p>
-                                                    <ul>
-                                                        <li>tópicos :o</li>
-                                                        <li>Sim!</li>
-                                                    </ul>
+                                                    <p>Aperfeiçoei meus conhecimentos em <strong>programação</strong>, <strong>lógica digital</strong>, <strong>eletrônica</strong> e <strong>programação orientada a objetos</strong>. 
+                                                    <br>Desenvolvi diversos códigos na <strong>Linguagem C</strong> para fins de estudo da linguagem.
+                                                    <br> Alguns dos meus algoritmos desenvolvidos nesse período estão disponíveis <a href="https://github.com/xuaun/disciplines-projects" target="_blank">neste repositório do Github</a>.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -328,10 +357,10 @@
                                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
                                                 aria-labelledby="headingThree">
                                                 <div class="panel-body">
-                                                    <p>Far far away, behind the word <strong>mountains</strong>, far
-                                                        from the countries Vokalia and Consonantia, there live the blind
-                                                        texts. Separated they live in Bookmarksgrove right at the coast
-                                                        of the Semantics, a large language ocean.</p>
+                                                    <p>Durante minha graduação, tive meus primeiros contatos com a área da pesquisa, computação e acessibilidade. Pude também desenvolver minha didática, habilidades de apresentação e elaboração de relatórios ao longo desses anos.
+                                                    <br>Ao longo do curso, participei de bolsas, trabalhos voluntários e estágios de ensino de diversas matérias, como programação e robótica, inclusive para alunos público alvo da educação especial.
+                                                    <br>Participei de diversos grupos de estudos e pesquisa, fui representando discente do curso de graduação, desenvolvi pesquisas acadêmicas, estagiei em escolas que seguem o modelo bilíngue para surdos (Libras | Português).
+                                                    <br>Desenvolvi minhas habilidades em diversas linguagens de programação e sobre as áreas de gamificação e de acessibilidade em jogos.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -348,10 +377,19 @@
                                             <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
                                                 aria-labelledby="headingFour">
                                                 <div class="panel-body">
-                                                    <p>Far far away, behind the word <strong>mountains</strong>, far
-                                                        from the countries Vokalia and Consonantia, there live the blind
-                                                        texts. Separated they live in Bookmarksgrove right at the coast
-                                                        of the Semantics, a large language ocean.</p>
+                                                    <p>Ao longo desses últimos anos, fui realizando inúmeros cursos e certificações, passando desde Experiência do Usuário até Programação Estatística.
+                                                    <br>Algumas das minhas principais certificações são:
+                                                    <ul>
+                                                        <li>Data Analyst Associate (SQL), <strong>DataCamp</strong></li>
+                                                        <li>Diversas certificações (R, Python, SQL, Power BI e Cloud), <strong>DataCamp</strong></li>
+                                                        <li>Product Analytics, <strong>Pendo</strong></li>
+                                                        <li>Cloud Digital Leader, <strong>Google</strong></li>
+                                                        <li>User Experience (UX) Design, <strong>Google</strong></li>
+                                                        <li>UX / UI: Fundamentos para o design de interface, <strong>USP</strong></li>
+                                                        <li>Intensivo em UX Design, <strong>Mergo</strong></li>
+                                                    </ul>
+                                                    Outras certificações menores, mas igualmente importantes para mim, você pode encontrar na <a href="https://www.linkedin.com/in/joao-victor-araujo-lima/details/certifications/?locale=pt_BR" target="_blank">minha página do Linkedin</a>.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>                                        
@@ -367,7 +405,7 @@
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
                                 data-animate-effect="fadeInLeft">
-                                <span class="heading-meta">Experiências</span>
+                                <span class="heading-meta">Onde já trabalhei?</span>
                                 <h2 class="colorlib-heading animate-box">Experiência profissional</h2>
                             </div>
                         </div>
@@ -382,15 +420,78 @@
                                             </div>
 
                                             <div class="timeline-label">
-                                                <h2><a href="#">Pesquisador - UX | Dados | Acessibilidade na Fundação de Apoio ao IPT (FIPT)</a> <span>2021-atual</span></h2>
-                                                <p>Pesquisador em projeto de Pesquisa e Desenvolvimento (P&D) de software e atuante na área de Acessibilidade e Inclusão, com foco na inclusão de surdos falantes da Língua Brasileira de Sinais (Libras), ambos na Fundação de Apoio ao IPT (FIPT).
-                                                    Minha principal função atualmente é como membro representante da equipe de Experiência do Usuário (UX) como pesquisador de UX. Para isso, também tenho realizado trabalhos com dados estatísticos públicos do IBGE (Censo e PNS).
-                                                    Neste processo, tive contato com a metodologia ágil, fazendo uso de ferramentas como Jira e Confluence, e mantendo contato direto com o líder ágil para entender melhor os conceitos e práticas adotadas nos projetos que estou inserido.
-                                                    Outras atividades que tenho desenvolvido são: Participação em falas e apresentações em inglês para a equipe de “Product Diversity Office (PDO)” da Lenovo; Participação como membro em equipes de Diversidade & Inclusão do IPT e da Lenovo; Participação ativa na criação de soluções inovadoras e de pesquisas em minha área de atuação.</p>
+                                                <h2><a href="#">Consultor de Matemática em Português (Localização) <br><strong>Duolingo</strong></a> <br><span>Abril de 2024 - Novembro de 2024</span></h2>
+                                                <p>
+                                                <ul>
+                                                    <li>Fornecer suporte de localização e de acessibilidade para o curso de Matemática no aplicativo Duolingo em Português</li>
+                                                    <li>Contribuir para o desenvolvimento de um glossário com base no conteúdo original e nos guias de estilo do Duolingo</li>
+                                                    <li>Consultar membros das equipes para alinhar as abordagens pedagógicas que devem ser capturadas na tradução</li>
+                                                    <li>Realizar QA (controle de qualidade) e LQA (avaliação de qualidade linguística)</li>
+                                                </ul>
+                                                </p>
                                             </div>
                                         </div>
                                     </article>
 
+                                    <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="timeline-entry-inner">
+
+                                            <div class="timeline-icon color-1">
+                                                <i class="icon-pen2"></i>
+                                            </div>
+
+                                            <div class="timeline-label">
+                                                <h2><a href="#">Especialista em Dashboard <br><strong>Duolingo</strong></a> <br><span>Junho de 2024 - Setembro de 2024</span></h2>
+                                                <p><ul>
+                                                    <li>Criação, manutenção e responsável pelos Dashboards e Trackers criados para gestão das equipes e projetos internos</li>
+                                                    <li>Criação e padronização de novos modelos de Dashboards e Trackers para amplo uso pelas equipes internas</li>
+                                                    <li>Uso avançado do Google Sheets e do Apps Script nas atividades desenvolvidas</li>
+                                                </ul>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="timeline-entry-inner">
+
+                                            <div class="timeline-icon color-1">
+                                                <i class="icon-pen2"></i>
+                                            </div>
+
+                                            <div class="timeline-label">
+                                                <h2><a href="#">Pesquisador de Experiência do Usuário (UXR)<br><strong>Avenue Code</strong></a> <br><span>Cliente: Braskem</span><br><span>Maio de 2024 - Agosto de 2024</span></h2>
+                                                <p><ul>
+                                                    <li>Uso de metodologias qualitativas e quantitativas em UX Research</li>
+                                                    <li>Responsável pelo uso e organização de Dashboards dos principais dados e métricas do produto</li>
+                                                    <li>Realização de entrevistas e testes de usabilidade</li>
+                                                </ul>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="timeline-entry-inner">
+
+                                            <div class="timeline-icon color-1">
+                                                <i class="icon-pen2"></i>
+                                            </div>
+
+                                            <div class="timeline-label">
+                                                <h2><a href="#">Pesquisador de UX | Acessibilidade | Dados<br><strong>FIPT</strong></a> <br><span>Cliente: Lenovo</span><br><span>Agosto de 2021 - Janeiro de 2024</span></h2>
+                                                <p><ul>
+                                                    <li>Projeto de pesquisa para melhorar a acessibilidade digital usando metodologias ágil</li>
+                                                    <li>Colaboração em ambiente entre diferentes equipes - UX, desenvolvimento, IA e QA</li>
+                                                    <li>Uso da Língua Brasileira de Sinais (Libras) em ambiente de trabalho e em entrevistas com usuários</li>
+                                                    <li>Líder da equipe de experiência do usuário (UX)</li>
+                                                    <li>Construção de proto-personas baseada em dados censitários da população surda brasileira, fazendo uso de métodos de aprendizagem de máquina e clusterização para isso</li>
+                                                    <li>Membro de iniciativas de Diversidade e Inclusão (D&I) na FIPT e na Lenovo</li>
+                                                </ul>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
 
                                     <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
                                         <div class="timeline-entry-inner">
@@ -398,12 +499,12 @@
                                                 <i class="icon-pen2"></i>
                                             </div>
                                             <div class="timeline-label">
-                                                <h2><a href="#">Pesquisador - Mestrado acadêmico | Bolsista pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico</a>
-                                                    <span>2020-2021</span></h2>
-                                                <p>Pesquisador de Mestrado Acadêmico de projeto intitulado "Reflexões e possibilidades sobre a quantificação dos surdos sinalizantes nos levantamentos censitários brasileiros". Bolsista CNPq até 2021.
-                                                    Iniciei meu Mestrado em 2020, ano que iniciou a pandemia de Covid-19. Meus estudos continuariam seguindo a discussão sobre Ansiedade à Matemática em alunos surdos, mas acabou se modificando ao longo do tempo.
-                                                    Atualmente pesquiso conceitos da Educação Especial e das Ciências Sociais, focando nas representações dos surdos e da Libras nos levantamentos censitários brasileiros.
-                                                    Pude continuar me desenvolvendo enquanto pesquisador, encontrando outras possibilidades de fazer pesquisa, mesmo nas adversidades encontradas ao longo desta trajetória acadêmica.</p>
+                                                <h2><a href="#">Pesquisador - Mestrado Acadêmico - Bolsista<br><strong>UFSCar</strong></a> <br><span>Bolsa CNPq</span><br><span>Fevereiro de 2020 - Julho de 2023</span></h2>
+                                                <p><ul>
+                                                    <li>Análises estatística, histórica e documental de dados censitários brasileiros sobre a população surda</li>
+                                                    <li>Pesquisa acadêmica em literatura científica e documental sobre surdez e línguas de sinais</li>
+                                                    <li>Análises de produções acadêmicas, científicas e de mídias sociais sobre conteúdos de acessibilidade</li>
+                                                </ul></p>
                                             </div>
                                         </div>
                                     </article>
@@ -414,11 +515,15 @@
                                                 <i class="icon-pen2"></i>
                                             </div>
                                             <div class="timeline-label">
-                                                <h2><a href="#">Pesquisador - Iniciação Científica | Bolsista pela Fundação de Amparo à Pesquisa do Estado de São Paulo</a> <span>2019-2019</span></h2>
-                                                <p>Bolsista FAPESP de Iniciação Científica em projeto de pesquisa intitulado: "Aplicação de escala de ansiedade à matemática em alunos surdos do estado de São Paulo".
-                                                    A partir deste projeto pude apresentar os achados de pesquisa em diversos eventos nacionais e internacionais, além de realizar a aplicação de um questionário (survey do tipo Likert) presencial para mais de 100 participantes surdos na capital paulista, de maneira autônoma e eficiente. 
-                                                    Durante o desenvolvimento deste projeto eu pude desenvolver minhas habilidades de pesquisador, assim como de cientista de dados, realizando a coleta, tratamento e análise qualitativa e estatística dos achados desta pesquisa.
-                                                    Alguns achados que considero essenciais que pude verificar com este projeto foram: a importância da inclusão e da acessibilidade dos surdos, principalmente em escolas bilíngues (Libras | Português); E a importância da Libras enquanto língua de instrução nestes espaços educacionais para garantir a aprendizagem pelos alunos surdos.</p>
+                                                <h2><a href="#">Pesquisador - Iniciação Científica - Bolsista<br><strong>USP</strong></a> <br><span>Bolsa FAPESP</span><br><span>Março de 2019 - Dezembro de 2019</span></h2>
+                                                <p>Projeto de pesquisa intitulado: "Aplicação de escala de ansiedade à matemática em alunos surdos do estado de São Paulo".
+                                                    <ul>
+                                                    <li>Pesquisa sobre Ansiedade à Matemática em alunos surdos</li>
+                                                    <li>Responsável por coletar, tratar e analisar estatisticamente os dados de pesquisa</li>
+                                                    <li>Apresentação dos achados em eventos e conferências acadêmicas</li>
+                                                    <li>Design de survey acessível e aplicação de entrevistas acessíveis</li>
+                                                    <li>Validação estatistica de dados coletados via survey</li>
+                                                </ul></p>
                                             </div>
                                         </div>
                                     </article>
@@ -429,11 +534,11 @@
                                                 <i class="icon-pen2"></i>
                                             </div>
                                             <div class="timeline-label">
-                                                <h2><a href="#">Bolsista de "Ensino e Pesquisa de Programação" pela Universidade de São Paulo</a> <span>2017-2018</span></h2>
+                                                <h2><a href="#">Bolsista de Ensino e Pesquisa em Programação<br><strong>USP</strong></a> <br><span>Bolsa USP</span><br><span>Setembro de 2017 - Agosto de 2018</span></h2>
                                                 <p>Bolsista no projeto de ensino e pesquisa intitulado: "Laboratório de introdução à programação para alunos do ensino fundamental".
-                                                    Neste projeto pude lecionar programação e robótica para alunos dos anos finais do Ensino Fundamental de escolas públicas. 
-                                                    As principais atividades desenvolvidas foram: escolha de conteúdos, planejamento do cronograma de aulas, ensino de linguagens de "programação visual" (Code.org e Scratch) e programação de Arduino.
-                                                    Pude desenvolver habilidades de trabalho em equipe, didática e de apresentação.</p>
+                                                <br>Neste projeto pude lecionar programação e robótica para alunos dos anos finais do Ensino Fundamental de escolas públicas. 
+                                                <br>As principais atividades desenvolvidas foram: escolha de conteúdos, planejamento do cronograma de aulas, ensino de linguagens de "programação visual" (Code.org e Scratch) e programação de Arduino.
+                                                <br>Pude desenvolver habilidades de trabalho em equipe, didática e de apresentação.</p>
                                             </div>
                                         </div>
                                     </article>
@@ -444,10 +549,10 @@
                                                 <i class="icon-pen2"></i>
                                             </div>
                                             <div class="timeline-label">
-                                                <h2><a href="#">Bolsista de "Ensino e Pesquisa de Matemática" pela Universidade de São Paulo</a> <span>2016-2017</span></h2>
+                                                <h2><a href="#">Bolsista de Ensino e Pesquisa em Matemática<br><strong>USP</strong></a> <br><span>Bolsa USP</span><br><span>Setembro de 2016 - Agosto de 2017</span></h2>
                                                 <p>Bolsista no projeto de ensino e pesquisa intitulado: "Planejando atividades diferenciadas sobre tratamento da informação na escola pública".
-                                                    Neste projeto pude me aprofundar em como a área de tratamento da informação era ensinada nas escolas públicas e, a partir disso, preparar materiais e discussões para serem levadas em sala de aula, para alunos dos anos finais do Ensino Fundamental e do Ensino Médio.
-                                                    Pude desenvolver habilidades de pesquisa, trabalho em equipe, desenvolvimento de relatórios, preparação de materiais para ensino, didática e apresentação.</p>
+                                                <br>Neste projeto pude me aprofundar em como a área de tratamento da informação era ensinada nas escolas públicas e, a partir disso, preparar materiais e discussões para serem levadas em sala de aula, para alunos dos anos finais do Ensino Fundamental e do Ensino Médio.
+                                                <br>Pude desenvolver habilidades de pesquisa, trabalho em equipe, desenvolvimento de relatórios, preparação de materiais para ensino, didática e apresentação.</p>
                                             </div>
                                         </div>
                                     </article>
@@ -716,7 +821,7 @@
                                         <i class="icon-globe-outline"></i>
                                     </div>
                                     <div class="colorlib-text">
-                                        <p><a href="#">lima.jva@gmail.com</a></p>
+                                        <p><a href="#">email</a></p>
                                     </div>
                                 </div>
 
@@ -736,7 +841,7 @@
                                         <i class="icon-phone"></i>
                                     </div>
                                     <div class="colorlib-text">
-                                        <p><a href="tel://">+55 (12) 9 8899-4094</a></p> <!-- Talvez mudar pra link whats? -->
+                                        <p><a href="tel://">telefone</a></p> <!-- Talvez mudar pra link whats? -->
                                     </div>
                                 </div>
                             </div>                            
@@ -766,6 +871,20 @@
 
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
+
+    <script>
+        function changeLanguage(language) {
+            let newUrl;
+            if (language === 'en') {
+                newUrl = 'index_en.html';
+            } else if (language === 'pt') {
+                newUrl = 'index_pt.html';
+            } else if (language === 'fr') {
+                newUrl = 'index_fr.html';
+            }
+            window.location.href = newUrl;
+        }
+    </script>
 
 </body>
 

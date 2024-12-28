@@ -95,7 +95,7 @@ figure {
   @media screen and (max-width: 768px) {
     #colorlib-aside {
       width: 300px;
-      overflow-y: scroll;
+      overflow-y: auto;
       -moz-transform: translateX(-300px);
       -webkit-transform: translateX(-300px);
       -webkit-overflow-scrolling: touch; /* Suaviza o scroll em dispositivos móveis */
@@ -1313,7 +1313,7 @@ body.offcanvas {
   height: 130px; }
 
 .colorlib-nav-toggle {
-  cursor: auto;
+  cursor: pointer;
   text-decoration: none; }
   .colorlib-nav-toggle.active i::before, .colorlib-nav-toggle.active i::after {
     background: #000; }

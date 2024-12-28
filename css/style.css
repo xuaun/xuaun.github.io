@@ -85,17 +85,20 @@ figure {
   float: left;
   width: 300px;
   position: fixed;
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 1001;
   background: #f2f3f7;
   -webkit-transition: 0.5s;
+  -webkit-overflow-scrolling: touch; /* Suaviza o scroll em dispositivos móveis */
   -o-transition: 0.5s;
   transition: 0.5s; }
   @media screen and (max-width: 768px) {
     #colorlib-aside {
       width: 300px;
+      overflow-y: auto;
       -moz-transform: translateX(-300px);
       -webkit-transform: translateX(-300px);
+      -webkit-overflow-scrolling: touch; /* Suaviza o scroll em dispositivos móveis */
       -ms-transform: translateX(-300px);
       -o-transform: translateX(-300px);
       transform: translateX(-300px);

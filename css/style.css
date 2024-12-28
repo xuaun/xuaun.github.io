@@ -230,6 +230,12 @@ figure {
       width: 100%;
       padding: 0 1em; } }
 
+      #navbar {
+        overflow-y: auto;
+        max-height: calc(100vh - 60px); /* Ajusta o tamanho máximo do menu */
+        -webkit-overflow-scrolling: touch; /* Suaviza o scroll em dispositivos móveis */
+      }
+
 #colorlib-hero {
   min-height: 500px;
   background: #fff url(../images/loader.gif) no-repeat center center;

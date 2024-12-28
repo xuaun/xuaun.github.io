@@ -143,40 +143,28 @@
 
 	};
 
-	var clickMenu = function() {
+	var clickMenu = function () {
 		const navbar = $('#navbar');
-		const navLinks = $('#navbar a:not([class="external"])');
 		const toggleButton = $('.js-colorlib-nav-toggle');
 	
-		// Trata os cliques nos links do menu
-		navLinks.click(function(event) {
+		// Remove conflitos com Bootstrap Collapse
+		$(document).off('click.bs.collapse.data-api', '#navbar a');
+	
+		$('#navbar a:not([class="external"])').click(function (event) {
 			const section = $(this).data('nav-section');
 	
 			if ($('[data-section="' + section + '"]').length) {
-				// Rola até a seção correspondente
 				$('html, body').animate({
 					scrollTop: $('[data-section="' + section + '"]').offset().top - 55
 				}, 500);
 			}
 	
-			// Fecha o menu apenas se estiver aberto
-			if (navbar.hasClass('in')) {
-				navbar.removeClass('in');
-				navbar.attr('aria-expanded', 'false');
+			if (navbar.hasClass('show')) {
+				navbar.removeClass('show');
 				toggleButton.removeClass('active');
 			}
 	
 			event.preventDefault();
-		});
-	
-		// Impede que o menu feche ao clicar ou escrolar dentro dele
-		navbar.on('click touchmove', function(e) {
-			e.stopPropagation();
-		});
-	
-		// Impede que o menu feche ao tocar no botão de toggle
-		toggleButton.click(function(e) {
-			e.stopPropagation();
 		});
 	};
 

@@ -103,11 +103,7 @@ figure {
       -ms-transform: translateX(-300px);
       -o-transform: translateX(-300px);
       transform: translateX(-300px);
-      padding-top: 4em; } 
-      scroll-behavior: auto;
-      /* scrollbar-color takes 2 colors. 1st is scroll grabber, 2nd background */
-      scrollbar-color: rgb(23, 38, 182) rgb(162, 170, 238) ;
-      scrollbar-width: auto;}
+      padding-top: 4em; } }
   #colorlib-aside .author-img {
     width: 150px;
     height: 150px;

@@ -133,8 +133,7 @@ figure {
     display: block;
     width: 100%; }
     #colorlib-aside #colorlib-main-menu .collapse {
-      display: inline-block !important;
-      width: 100%; }
+      display: block !important; }
     #colorlib-aside #colorlib-main-menu ul {
       text-align: center;
       margin: 0;

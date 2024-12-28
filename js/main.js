@@ -202,7 +202,7 @@
 		
 	  	$('#colorlib-hero .flexslider').flexslider({
 			animation: "fade",
-			slideshowSpeed: 8000,
+			slideshowSpeed: 5000,
 			directionNav: true,
 			start: function(){
 				setTimeout(function(){

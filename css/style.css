@@ -77,6 +77,10 @@ figure {
     max-height: calc(100vh - 60px); /* Ajusta o tamanho do menu à altura da tela */
     -webkit-overflow-scrolling: touch; /* Suaviza o scroll em dispositivos móveis */
     position: relative; /* Garante que o menu se comporte corretamente */
+    -webkit-scrollbar,
+    -webkit-scrollbar-track {
+      display: block !important;
+    }
   }
 
 #colorlib-aside {
@@ -84,7 +88,7 @@ figure {
   padding-bottom: 40px;
   float: left;
   width: 300px;
-  position:fixed;
+  position:absolute;
   overflow-y: scroll;
   z-index: 1001;
   background: #f2f3f7;
@@ -95,6 +99,7 @@ figure {
   @media screen and (max-width: 768px) {
     #colorlib-aside {
       width: 300px;
+      position:absolute;
       overflow-y: scroll;
       -moz-transform: translateX(-300px);
       -webkit-transform: translateX(-300px);

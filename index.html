@@ -38,7 +38,7 @@
 
 <body>
     <div id="colorlib-page">
-        <div class="container-wrap" role="navigation" class="navbar">
+        <div class="container-wrap">
             <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
                 aria-expanded="false" aria-controls="navbar"><i></i></a>
             <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
@@ -47,8 +47,8 @@
                     <h1 id="colorlib-logo"><a href="index.html">João Víctor <br>de Araujo Lima</a></h1>
                     <span class="position"><a href="#">Analista de dados | <br>Pesquisador de UX</a></span>
                 </div>
-                <nav id="colorlib-main-menu">
-                    <div>
+                <nav id="colorlib-main-menu" role="navigation" class="navbar">
+                    <div id="navbar" class="collapse">
                         <ul>
                             <div class="language-selector">
                                 <button class="btn-info" onclick="changeLanguage('en')">English</button>
@@ -67,7 +67,7 @@
                         </ul>
                     </div>
                     
-                    <div>
+                    <div class="collapse">
                         <ul>
                             <li><a href="https://www.linkedin.com/in/joao-victor-araujo-lima/?locale=pt_BR" target="_blank" class="btn-lg icon-linkedin2"></a> •
                                 <a href="https://github.com/xuaun" target="_blank" class="btn-lg icon-github"></a> •

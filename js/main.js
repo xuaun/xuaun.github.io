@@ -165,10 +165,6 @@
 		    return false;
 		});
 
-		$('#navbar').on('click touchmove', function(e) {
-			e.stopPropagation();
-		});
-
 
 	};
 

@@ -72,6 +72,13 @@ figure {
   overflow: hidden;
   position: relative; }
 
+  #navbar {
+    overflow-y: auto; /* Permite rolar o conteúdo */
+    max-height: calc(100vh - 60px); /* Ajusta o tamanho do menu à altura da tela */
+    -webkit-overflow-scrolling: touch; /* Suaviza o scroll em dispositivos móveis */
+    position: relative; /* Garante que o menu se comporte corretamente */
+  }
+
 #colorlib-aside {
   padding-top: 3em;
   padding-bottom: 40px;

@@ -163,6 +163,10 @@
 				navbar.removeClass('show');
 				toggleButton.removeClass('active');
 			}
+
+			navbar.on('touchmove', function (event) {
+				event.stopPropagation(); // Bloqueia propagação para evitar que o menu feche
+			});
 	
 			event.preventDefault();
 		});

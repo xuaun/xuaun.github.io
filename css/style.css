@@ -1005,15 +1005,17 @@ body.offcanvas {
     @media screen and (max-width: 768px) {
       .project .desc {
         opacity: 1;
-        background: rgba(0, 0, 0, 0.4); }
+        background: rgba(255,114,0,0.6); }
         .project .desc h3 {
           font-style: 28px;
           -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-          color: #000; }
+          color: #000; 
+          background-color: rgba(0,0,0,0.85);}
         .project .desc span {
           -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0); } }
+          transform: translate3d(0, 0, 0); 
+          background-color: rgba(0,0,0,0.85)} }
   .project:hover .desc {
     opacity: 1; }
     .project:hover .desc h3 {

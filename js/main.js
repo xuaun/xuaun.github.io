@@ -132,10 +132,6 @@
 	    }
 		});
 
-		$('#colorlib-aside').on('touchmove', function(e) {
-			e.stopPropagation(); // Impede que o evento de scroll feche o menu
-		});
-
 	};
 
 	var clickMenu = function () {

@@ -84,7 +84,7 @@ figure {
   padding-bottom: 40px;
   float: left;
   width: 300px;
-  position: fixed;
+  position:absolute;
   overflow-y: auto;
   z-index: 1001;
   background: #f2f3f7;
@@ -95,6 +95,7 @@ figure {
   @media screen and (max-width: 768px) {
     #colorlib-aside {
       width: 300px;
+      position:absolute;
       overflow-y: scroll;
       -moz-transform: translateX(-300px);
       -webkit-transform: translateX(-300px);

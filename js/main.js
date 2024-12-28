@@ -132,10 +132,6 @@
 	    }
 		});
 
-		$('#colorlib-aside').on('touchmove', function(e) {
-			e.stopPropagation(); // Impede que o evento de scroll feche o menu
-		});
-
 	};
 
 	var clickMenu = function () {
@@ -158,10 +154,6 @@
 				navbar.removeClass('show');
 				toggleButton.removeClass('active');
 			}
-
-			navbar.on('touchmove', function (event) {
-				event.stopPropagation(); // Bloqueia propagação para evitar que o menu feche
-			});
 	
 			event.preventDefault();
 		});

@@ -103,15 +103,41 @@ figure {
     -ms-border-radius: 50%;
     border-radius: 50%; }
 
-  #colorlib-page .author-img {
+  #colorlib-main .author-img {
     width: 150px;
     height: 150px;
-    margin: 0 auto;
+    margin: 15vh auto;
     margin-bottom: 30px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%; }
+  #colorlib-main #colorlib-logo .logo-name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: .5em;
+    display: block;
+    width: 100%; }
+  #colorlib-main #colorlib-logo .logo-position {
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: .5em;
+    display: block;
+    width: 100%; }
+  #colorlib-main #colorlib-logo a {
+    display: block;
+    text-align: center;
+    color: rgba(255,114,0);
+    padding-right: .3em; }
+  #colorlib-main .presentation {
+    display: block;
+    text-align: center;
+    padding-top: 3em;
+    padding-right: .3em; }
+
+
   #colorlib-aside .position {
     display: block;
     margin-bottom: 2em;
@@ -241,12 +267,17 @@ figure {
       width: 100%;
       padding: 0 1em; } }
 
+  #colorlib-hero h2 {
+    padding-bottom: 0.5em; }
+  #colorlib-hero h3 {
+    padding-bottom: 1em; }
+
 #colorlib-hero {
   min-height: 500px;
-  background: #fff url(../images/loader.gif) no-repeat center center;
+  background: #f2f3f7;
   width: 100%;
   float: left;
-  margin-bottom: 10em;
+  margin-bottom: 1em;
   clear: both; }
   #colorlib-hero .flexslider {
     border: none;

@@ -104,8 +104,8 @@ figure {
     border-radius: 50%; }
 
   #colorlib-main .author-img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 15vh auto;
     margin-bottom: 30px;
     -webkit-border-radius: 50%;
@@ -1474,3 +1474,95 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+  /*================= Button Dark/Light ===============*/
+.nav__btns {
+  display: block;
+  align-items: center;
+}
+
+.change-theme {
+  font-size: 2rem;
+  color: hsl(240, 8%, 15%);
+  cursor: pointer;
+}
+
+.change-theme:hover, body.dark-theme .change-theme:hover {
+  color: hsl(240, 69%, 61%);
+}
+
+/*================= Dark Theme ===============*/
+
+body.dark-theme {
+  background-color: hsl(240, 28%, 12%);
+}
+body.dark-theme #colorlib-aside {
+  background-color: hsl(240, 29%, 20%);
+}
+body.dark-theme #colorlib-hero {
+  background-color: hsl(240, 29%, 20%);
+}
+body.dark-theme.offcanvas #colorlib-aside {
+  background-color: hsl(240, 29%, 20%);
+}
+body.dark-theme .panel-heading a.collapsed {
+  background-color: hsl(240, 29%, 20%);
+}
+body.dark-theme .colorlib-feature .colorlib-icon {
+  background-color: hsl(240, 29%, 20%);
+}
+body.dark-theme .panel {
+  background-color: hsl(240, 29%, 20%);
+}
+body.dark-theme {
+  color: hsl(240, 8%, 75%);
+}
+body.dark-theme .heading-meta {
+  color: hsl(240, 8%, 75%);
+}
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
+  color: hsl(240, 8%, 95%);
+}
+body.dark-theme a:hover, body.dark-theme a:active, body.dark-theme a:focus {
+  color: hsl(240, 57%, 53%);
+}
+body.dark-theme a {
+  color: hsl(240, 69%, 61%);
+}
+body.dark-theme .colorlib-feature.colorlib-feature-sm .colorlib-icon i {
+  color: hsl(240, 69%, 61%);
+}
+body.dark-theme .panel-heading a {
+  background-color: hsl(240, 69%, 61%);
+  color: hsl(240, 8%, 95%);
+}
+body.dark-theme .btn-primary {
+  color: hsl(240, 8%, 95%);
+  background-color: hsl(240, 69%, 61%);
+  border: hsl(240, 69%, 61%);
+}
+body.dark-theme .services {
+  background-color: hsl(240, 29%, 20%);
+}
+body.dark-theme .change-theme {
+  color: hsl(240, 8%, 75%);
+}
+body.dark-theme #colorlib-aside #colorlib-main-menu ul li a:after {
+  background-color: hsl(240, 57%, 53%);
+}
+body.dark-theme #colorlib-aside #colorlib-main-menu ul li.active a {
+  color: hsl(240, 57%, 53%);
+}
+body.dark-theme #colorlib-aside #colorlib-main-menu ul li a, body.dark-theme #colorlib-aside #colorlib-main-menu ul li a:hover {
+  color: hsl(240, 8%, 75%);
+}
+body.dark-theme .project .desc {
+  background-color: rgba(156, 88, 0, 0.9);
+}
+body.dark-theme .btn-info {
+  background-color: rgba(156, 88, 0);
+  border: 2px solid rgba(156, 88, 0);
+}
+body.dark-theme .no-link:hover, body.dark-theme .no-link:active, body.dark-theme .no-link:focus {
+  color: hsl(240, 8%, 95%);
+}

@@ -116,7 +116,6 @@ figure {
     text-align: center;
     font-weight: 700;
     font-size: 40px;
-    margin-bottom: .5em;
     display: block;
     width: 100%; }
   #colorlib-main #colorlib-logo .logo-position {
@@ -126,16 +125,24 @@ figure {
     margin-bottom: .5em;
     display: block;
     width: 100%; }
-  #colorlib-main #colorlib-logo a {
+  #colorlib-main #colorlib-logo {
+    margin-bottom: 10px; }
+  #colorlib-main #colorlib-logo .logo-position {
     display: block;
     text-align: center;
     color: rgba(255,114,0);
-    padding-right: .3em; }
+    font-family: "Quicksand", Arial, sans-serif; }
+  #colorlib-main #colorlib-logo .logo-name {
+    color: rgba(0, 0, 0, 0.85);
+    font-family: "Quicksand", Arial, sans-serif; }
   #colorlib-main .presentation {
     display: block;
     text-align: center;
     padding-top: 3em;
     padding-right: .3em; }
+  #colorlib-main .presentation h2, #colorlib-main .presentation h3 {
+    font-family: "Quicksand", Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.7) }
 
 
   #colorlib-aside .position {
@@ -147,7 +154,7 @@ figure {
     text-align: right;
     font-weight: 700;
     font-size: 22px;
-    margin-bottom: .5em;
+    margin-bottom: .3em;
     display: block;
     width: 100%; }
     #colorlib-aside #colorlib-logo a {
@@ -1242,7 +1249,8 @@ body.offcanvas {
 .btn-primary {
   background: #2c98f0;
   color: #fff;
-  border: 2px solid #2c98f0; }
+  border: 2px solid #2c98f0; 
+  font-size: 12px;}
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     background: #44a4f2 !important;
     border-color: #44a4f2 !important; }
@@ -1253,6 +1261,8 @@ body.offcanvas {
     .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
       background: #2c98f0;
       color: #fff; }
+  .btn-primary span {
+    font-size: 12px;}
 
 .btn-success {
   background: #5cb85c;

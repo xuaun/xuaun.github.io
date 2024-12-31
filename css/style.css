@@ -161,6 +161,16 @@ figure {
     #colorlib-aside #colorlib-main-menu .collapse {
       display: inline-block !important;
       width: 100%; }
+    #colorlib-aside #colorlib-main-menu .collapsing {
+      display: inline-block !important;
+      width: 100%; 
+      height: 442px !important; 
+      -webkit-transition-property: none;
+      transition-property: none;
+      -webkit-transition-duration: none;
+      transition-duration: none;
+      -webkit-transition-timing-function: none;
+      transition-timing-function: none; }
     #colorlib-aside #colorlib-main-menu ul {
       text-align: center;
       margin: 0;

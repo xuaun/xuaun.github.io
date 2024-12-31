@@ -1586,3 +1586,7 @@ body.dark-theme .btn-info {
 body.dark-theme .no-link:hover, body.dark-theme .no-link:active, body.dark-theme .no-link:focus {
   color: hsl(240, 8%, 95%);
 }
+body.dark-theme #colorlib-main #colorlib-logo .logo-name {
+  color: hsl(240, 8%, 95%); }
+  body.dark-theme #colorlib-main .presentation h2, body.dark-theme #colorlib-main .presentation h3 {
+  color: hsl(240, 8%, 75%) }

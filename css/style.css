@@ -1590,3 +1590,6 @@ body.dark-theme #colorlib-main #colorlib-logo .logo-name {
   color: hsl(240, 8%, 95%); }
   body.dark-theme #colorlib-main .presentation h2, body.dark-theme #colorlib-main .presentation h3 {
   color: hsl(240, 8%, 75%) }
+  body.dark-theme #colorlib-main #colorlib-logo .logo-position {
+  color: rgba(217, 126, 10);
+}

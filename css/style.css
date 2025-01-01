@@ -868,6 +868,17 @@ body.offcanvas {
     .progress-bar.color-6 span {
       color: #4054b2; }
 
+.presentation-btn .colorlib-feature.colorlib-feature-sm {
+  margin-bottom: 0;
+  margin-left: 5vh;
+}
+@media screen and (max-width: 1200px) {
+  .presentation-btn .colorlib-feature.colorlib-feature-sm {
+    margin-left: 0; } }
+.presentation-btn .colorlib-feature.colorlib-feature-sm .colorlib-icon {
+  background-color: transparent;
+}
+
 .colorlib-feature {
   text-align: left;
   width: 100%;

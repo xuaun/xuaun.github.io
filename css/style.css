@@ -1005,13 +1005,39 @@ body.offcanvas {
   height: 300px;
   width: 100%;
   display: block;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border-width: 3px;
+  border-style: solid;
+  border-color: #000; }
+  .project .desc-title {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 20%;
+    background: rgba(255,114,0,0.85);
+    opacity: 1; }
+    .project .desc-title h3 {
+      font-family: "Quicksand", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin: 15px; }
+      .project .desc-title h3 a {
+        color: #fff; }
+        .project .desc-title h3 a:hover {
+          text-decoration: underline !important; }
   .project .desc {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    width: 50%;
+    height: 80%;
     background: rgba(255,114,0,0.85);
     opacity: 0;
     -webkit-transition: 0.3s;
@@ -1021,7 +1047,7 @@ body.offcanvas {
       padding: 20px;
       display: block;
       position: relative;
-      height: 300px; }
+      height: 240px; }
       .project .desc .con .icon {
         position: absolute;
         bottom: 20px;
@@ -1041,7 +1067,7 @@ body.offcanvas {
         .project .desc .con .icon i {
           font-size: 16px;
           color: #333333; }
-    .project .desc h3 {
+        .project .desc h3 {
       font-family: "Quicksand", Arial, sans-serif;
       font-size: 16px;
       font-weight: 500;
@@ -1588,8 +1614,12 @@ body.dark-theme #colorlib-aside #colorlib-main-menu ul li a, body.dark-theme #co
   color: hsl(240, 8%, 75%);
 }
 body.dark-theme .project .desc {
-  background-color: rgba(156, 88, 0, 0.9);
-}
+  background-color: rgba(201, 114, 0, 0.9);
+} @media screen and (max-width: 768px) {
+  body.dark-theme .project .desc {
+    opacity: 1;
+    background: rgba(201, 114, 0, 0.6); }
+  }
 body.dark-theme .btn-info {
   background-color: rgba(156, 88, 0);
   border: 2px solid rgba(156, 88, 0);
@@ -1603,4 +1633,10 @@ body.dark-theme #colorlib-main #colorlib-logo .logo-name {
   color: hsl(240, 8%, 75%) }
   body.dark-theme #colorlib-main #colorlib-logo .logo-position {
   color: rgba(217, 126, 10);
+}
+body.dark-theme .project .desc-title h3 a:hover {
+  color: hsl(240, 8%, 95%); 
+}
+body.dark-theme .project .desc-title  {
+  background-color: rgba(201, 114, 0, 0.9); 
 }

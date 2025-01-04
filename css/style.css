@@ -1028,8 +1028,14 @@ body.offcanvas {
       margin: 15px; }
       .project .desc-title h3 a {
         color: #fff; }
-        .project .desc-title h3 a:hover {
+        .project .desc-title h3 a:hover,
+        .project .desc-title h3 a:active,
+        .project .desc-title h3 a:focus {
           text-decoration: underline !important; }
+          .project .desc-title h3 .no-link:hover,
+          .project .desc-title h3 .no-link:active,
+          .project .desc-title h3 .no-link:focus {
+            text-decoration: none !important; }
   .project .desc {
     position: absolute;
     top: 0;

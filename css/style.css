@@ -1108,7 +1108,7 @@ body.offcanvas {
       .project .desc {
         opacity: 1;
         background: rgba(13, 85, 144, 0.6);
-        width: 75%; }
+        width: 60%; }
         .project .desc h3 {
           font-style: 28px;
           -webkit-transform: translate3d(0, 0, 0);

@@ -1551,6 +1551,49 @@ body.offcanvas {
   text-decoration: underline !important;
 }
 
+.work-filterDiv, .blog-filterDiv {
+  display: none;
+}
+@media (min-width: 992px) {
+  .colorlib-work .col-md-6:not(.work-show), .colorlib-blog .col-md-6:not(.blog-show) {
+      width: 0%;
+      padding: 0;
+  }
+}
+.work-show, .blog-show {
+  display: block;
+}
+.work-btn, .blog-btn {
+  margin-right: 0.5rem;
+  margin-bottom: 15px;
+  min-width: 100px;
+  font-family: "Quicksand", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-color: rgba(0, 0, 0, 0.7);
+  border-radius: 2px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding: 8px 15px !important;
+  background-color: #f2f3f7;
+  cursor: pointer; }
+  .work-btn:hover, .work-btn:focus, .blog-btn:hover, .blog-btn:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: none !important; 
+    background-color: #ddd; }
+    .work-btn.work-active, .blog-btn.blog-active {
+      background-color: rgba(44, 152, 240, 1);
+      color: white;
+    }
+
   /*================= Button Dark/Light ===============*/
 .nav__btns {
   display: block;
@@ -1660,3 +1703,11 @@ body.dark-theme .project .desc-title h3 a:focus {
 body.dark-theme .project .desc-title  {
   background-color: rgba(201, 114, 0, 0.9); 
 }
+body.dark-theme .work-btn, body.dark-theme .blog-btn {
+  background-color: hsl(240, 8%, 95%); }
+  body.dark-theme .work-btn:hover, body.dark-theme .work-btn:focus, body.dark-theme .blog-btn:hover, body.dark-theme .blog-btn:focus {
+    background-color: hsl(240, 8%, 75%); }
+    body.dark-theme .work-btn.work-active, body.dark-theme .blog-btn.blog-active {
+      background-color: hsl(240, 69%, 61%);
+      color: hsl(240, 8%, 95%);
+    }

@@ -344,3 +344,116 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+// Filter
+filterSelection("work-all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("work-filterDiv");
+  if (c == "work-all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "work-show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "work-show");
+  }
+  var work_colorlibs, j, k;
+  work_colorlibs = document.getElementsByClassName("colorlib-work");
+  for (i = 0; i < work_colorlibs.length; i++) {
+	var work_colorlib = work_colorlibs[i];
+	var work_col6 = work_colorlib.getElementsByClassName('col-md-6');
+	for(j = 0; j < work_col6.length; j++) {
+		var work_col, work_x2;
+		work_col = work_col6[j];
+		work_x2 = work_col.getElementsByClassName('work-filterDiv');
+		for(k = 0; k < work_x2.length; k++) {
+			w3RemoveClass(work_col6[j], "work-show");
+    		if (work_x2[k].className.indexOf(c) > -1) w3AddClass(work_col6[j], "work-show");
+		}
+	}
+  }
+}
+blog_filterSelection("blog-all")
+function blog_filterSelection(c) {
+  var blog_x, i;
+  blog_x = document.getElementsByClassName("blog-filterDiv");
+  if (c == "blog-all") c = "";
+  for (i = 0; i < blog_x.length; i++) {
+    blog_w3RemoveClass(blog_x[i], "blog-show");
+    if (blog_x[i].className.indexOf(c) > -1) blog_w3AddClass(blog_x[i], "blog-show");
+  }
+  var blog_colorlibs, j, k;
+  blog_colorlibs = document.getElementsByClassName("colorlib-blog");
+  for (i = 0; i < blog_colorlibs.length; i++) {
+	var blog_colorlib = blog_colorlibs[i];
+	var blog_col6 = blog_colorlib.getElementsByClassName('col-md-6');
+	for(j = 0; j < blog_col6.length; j++) {
+		var blog_col, blog_x2;
+		blog_col = blog_col6[j];
+		blog_x2 = blog_col.getElementsByClassName('blog-filterDiv');
+		for(k = 0; k < blog_x2.length; k++) {
+			blog_w3RemoveClass(blog_col6[j], "blog-show");
+    		if (blog_x2[k].className.indexOf(c) > -1) blog_w3AddClass(blog_col6[j], "blog-show");
+		}
+	}
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+function blog_w3AddClass(element, name) {
+	var i, arr1, arr2;
+	arr1 = element.className.split(" ");
+	arr2 = name.split(" ");
+	for (i = 0; i < arr2.length; i++) {
+	  if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+	}
+  }
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+function blog_w3RemoveClass(element, name) {
+	var i, arr1, arr2;
+	arr1 = element.className.split(" ");
+	arr2 = name.split(" ");
+	for (i = 0; i < arr2.length; i++) {
+	  while (arr1.indexOf(arr2[i]) > -1) {
+		arr1.splice(arr1.indexOf(arr2[i]), 1);     
+	  }
+	}
+	element.className = arr1.join(" ");
+  }
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer animate-box");
+var btns = btnContainer.getElementsByClassName("work-btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName(" work-active");
+    current[0].className = current[0].className.replace(" work-active", "");
+    this.className += " work-active";
+  });
+}
+
+var blog_btnContainer = document.getElementById("myBtnContainer2 animate-box");
+var blog_btns = blog_btnContainer.getElementsByClassName("blog-btn");
+for (var i = 0; i < blog_btns.length; i++) {
+	blog_btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName(" blog-active");
+    current[0].className = current[0].className.replace(" blog-active", "");
+    this.className += " blog-active";
+  });
+}

@@ -275,7 +275,7 @@
                 <section class="colorlib-work" data-section="work">
                     <div class="colorlib-narrow-content">
                         <div class="row">
-                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                            <div class="col-md-6 work-show col-md-offset-3 col-md-pull-3 animate-box"
                                 data-animate-effect="fadeInLeft">
                                 <span class="heading-meta">Professional Work</span>
                                 <h2 class="colorlib-heading animate-box">Most recent professional works</h2>
@@ -283,8 +283,23 @@
                         </div>
 
                         <div class="row">
+                            <div class="col-md-6 work-show col-md-offset-3 col-md-pull-3 animate-box"
+                                data-animate-effect="fadeInLeft">
+                                <span>Filter Projects</span>
+                            </div>
+                        </div>
+
+                        <div id="myBtnContainer animate-box" data-animate-effect="fadeInBottom">
+                            <button class="work-btn work-active animate-box" onclick="filterSelection('work-all')"> All</button>
+                            <button class="work-btn animate-box" onclick="filterSelection('work-data')"> Data</button>
+                            <button class="work-btn animate-box" onclick="filterSelection('work-ux')"> UX</button>
+                            <button class="work-btn animate-box" onclick="filterSelection('work-accessibility')"> Accessibility</button>
+                            <button class="work-btn animate-box" onclick="filterSelection('work-other')"> Other</button>
+                        </div>
+
+                        <div class="row">
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="project" style="background-image: url(images/img-1.png);">
+                                <div class="project work-filterDiv work-accessibility" style="background-image: url(images/img-1.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a href="https://patents.google.com/patent/US11836299B1" target="_blank">Virtual Sign Language System Patent
@@ -299,7 +314,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                                <div class="project" style="background-image: url(images/img-2.png);">
+                                <div class="project work-filterDiv work-other" style="background-image: url(images/img-2.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a href="https://blog.duolingo.com/pt/novas-materias/" target="_blank">Localization Math Content</a></h3>
@@ -313,7 +328,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-                                <div class="project" style="background-image: url(images/img-3.png);">
+                                <div class="project work-filterDiv work-data work-ux" style="background-image: url(images/img-3.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a href="https://dl.acm.org/doi/10.1145/3630970.3631081" target="_blank">Proto-Persona Clustering</a></h3>
@@ -327,7 +342,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-                                <div class="project" style="background-image: url(images/img-4.png);">
+                                <div class="project work-filterDiv work-accessibility work-ux" style="background-image: url(images/img-4.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a href="https://dl.acm.org/doi/10.1145/3630970.3631081" target="_blank">UX Research on Assistive Technology</a></h3>
@@ -341,7 +356,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="project" style="background-image: url(images/img-5.png);">
+                                <div class="project work-filterDiv work-data" style="background-image: url(images/img-5.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a class="no-link">Product Metrics Study in B2B model</a></h3>
@@ -361,15 +376,30 @@
                 <section class="colorlib-blog" data-section="blog">
                     <div class="colorlib-narrow-content">
                         <div class="row">
-                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                            <div class="col-md-6 blog-show col-md-offset-3 col-md-pull-3 animate-box"
                                 data-animate-effect="fadeInLeft">
                                 <span class="heading-meta">Academic and Personal Work</span>
                                 <h2 class="colorlib-heading animate-box">Most recent academic and personal works</h2>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-6 blog-show col-md-offset-3 col-md-pull-3 animate-box"
+                                data-animate-effect="fadeInLeft">
+                                <span>Filter Projects</span>
+                            </div>
+                        </div>
+
+                        <div id="myBtnContainer2 animate-box" data-animate-effect="fadeInBottom">
+                            <button class="blog-btn blog-active animate-box" onclick="blog_filterSelection('blog-all')"> All</button>
+                            <button class="blog-btn animate-box" onclick="blog_filterSelection('blog-data')"> Data</button>
+                            <button class="blog-btn animate-box" onclick="blog_filterSelection('blog-accessibility')"> Accessibility</button>
+                            <button class="blog-btn animate-box" onclick="blog_filterSelection('blog-other')"> Other</button>
+                        </div>
+
                         <div class="row">
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="project" style="background-image: url(images/img-6.png);">
+                                <div class="project blog-filterDiv blog-data" style="background-image: url(images/img-6.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a href="https://github.com/xuaun/Other-projects" target="_blank">Statistical Analysis in various academics projects</a></h3>
@@ -383,7 +413,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                                <div class="project" style="background-image: url(images/img-7.png);">
+                                <div class="project blog-filterDiv blog-accessibility blog-data" style="background-image: url(images/img-7.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a href="https://github.com/xuaun/scientific_research" target="_blank">Statistical Analysis of Survey</a></h3>
@@ -397,7 +427,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-                                <div class="project" style="background-image: url(images/img-8.png);">
+                                <div class="project blog-filterDiv blog-data" style="background-image: url(images/img-8.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a href="https://www.datacamp.com/portfolio/joaovictor-ne" target="_blank">Power BI, SQL, R and Python projects</a></h3>
@@ -411,7 +441,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-                                <div class="project" style="background-image: url(images/img-9.png);">
+                                <div class="project blog-filterDiv blog-other" style="background-image: url(images/img-9.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a href="https://github.com/xuaun/DiceRoller" target="_blank">Robotics projects</a></h3>
@@ -425,7 +455,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="project" style="background-image: url(images/img-10.png);">
+                                <div class="project blog-filterDiv blog-other" style="background-image: url(images/img-10.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a href="https://github.com/xuaun?tab=repositories" target="_blank">Web pages for various projects</a></h3>
@@ -439,7 +469,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                                <div class="project" style="background-image: url(images/img-11.png);">
+                                <div class="project blog-filterDiv blog-accessibility" style="background-image: url(images/img-11.png);">
                                     <div class="desc-title">
                                         <div class="con">
                                             <h3><a href="https://www.youtube.com/watch?v=Mi49iOI9F7I&list=PLdHBcmsrNsFCe7mLVywiEQNM97FGDb5fA&ab_channel=PortalAcessibilidadeUFSCar" target="_blank">Digital Accessibility Videos</a></h3>

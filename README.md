@@ -5,7 +5,7 @@ This first section is in English.
 [Versão em português logo abaixo.](#portuguese)
 
 ## Context
-Page created to share some of my academic and scientific projects in digital format in the areas of ```Data```, ```UX```, ```Accessibility```, and others, such as ```Web```, ```Robotics```, ```Localization``` and ```Education```.
+Page created to share some of my academic and scientific projects in digital format in the areas of ```Data```, ```UX```, ```Accessibility```, and others, such as ```Web```, ```Education```, ```Robotics```, and ```Localization```.
 
 On this page you can also find a little about my academic and professional experience, as well as ways to get in touch with me.
 
@@ -67,7 +67,7 @@ ____
 
 # <p id="portuguese">Meu Portfólio Digital - xuaun.github.io</p>
 ## Contexto
-Página criada para compartilhar alguns dos meus projetos acadêmicos e científicos em formato digital nas áreas de ```Dados```, ```UX```, ```Acessibilidade``` e outros, como ```Web```, ```Robótica```, ```Localização``` e ```Educação```.
+Página criada para compartilhar alguns dos meus projetos acadêmicos e científicos em formato digital nas áreas de ```Dados```, ```UX```, ```Acessibilidade``` e outros, como ```Web```, ```Educação```, ```Robótica``` e ```Localização```.
 
 Nesta página você também encontra um pouco sobre minhas trajetórias acadêmica e profissional, além de maneiras de entrar em contato.
 

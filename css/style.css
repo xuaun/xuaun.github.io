@@ -870,6 +870,7 @@ body.offcanvas {
 
 .presentation-btn .colorlib-feature.colorlib-feature-sm {
   margin-bottom: 0;
+  padding-bottom: 30px;
   margin-left: 5vh;
 }
 @media screen and (max-width: 1200px) {

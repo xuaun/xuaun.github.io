@@ -132,3 +132,27 @@ export function useScrollReveal(): void {
     };
   }, []);
 }
+
+/**
+ * Paints `.paint` highlights in the first time each one is fully on screen.
+ * The unpainted starting state lives in CSS behind the `js` class that
+ * index.html sets before first paint, so there is no flash and no-JS visitors
+ * simply see the highlights already painted.
+ */
+export function usePaintOnView(): void {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          (entry.target as HTMLElement).dataset.paint = "in";
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 1, rootMargin: "0px 0px -12% 0px" },
+    );
+
+    for (const mark of document.querySelectorAll(".paint")) observer.observe(mark);
+    return () => observer.disconnect();
+  }, []);
+}

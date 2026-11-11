@@ -55,9 +55,9 @@ export const en: Content = {
   about: {
     heading: "About",
     paragraphs: [
-      "I’m a Digital Accessibility Specialist based in São Carlos, Brazil. I run manual and automated audits, test with NVDA, JAWS, VoiceOver, and TalkBack, and turn what I find into remediation specs and acceptance criteria that development teams can act on.",
-      "I’m also a front-end developer. I work in React, TypeScript, HTML, and CSS, so my recommendations come with the semantic markup, ARIA, and focus management needed to implement them.",
-      "My background is in research with Deaf communities. I hold a master’s degree in Special Education, I’m fluent in Brazilian Sign Language (Libras), and I’ve supported accessibility work for Lenovo, Duolingo, and a Brazilian bank.",
+      "I’m a Digital Accessibility Specialist based in São Carlos, Brazil. I run manual and automated audits, test with NVDA, JAWS, VoiceOver, and TalkBack, and turn what I find into ==remediation specs and acceptance criteria== that development teams can act on.",
+      "I’m also a front-end developer. I work in React, TypeScript, HTML, and CSS, so my recommendations come with the ==semantic markup, ARIA, and focus management== needed to implement them.",
+      "My background is in research with Deaf communities. I hold a master’s degree in Special Education, I’m ==fluent in Brazilian Sign Language (Libras)==, and I’ve supported accessibility work for Lenovo, Duolingo, and a Brazilian bank.",
     ],
   },
   experience: {

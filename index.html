@@ -10,6 +10,8 @@
     <link rel="manifest" href="/site.webmanifest" />
     <!--app-head-->
     <script>
+      // Lets CSS hold scroll-triggered effects in their starting state only when scripts run.
+      document.documentElement.classList.add("js");
       // Apply the saved theme before first paint so the page never flashes.
       try {
         var t = localStorage.getItem("theme");

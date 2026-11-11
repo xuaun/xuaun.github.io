@@ -40,7 +40,7 @@ export function BoopLink({ href, children, icon = "arrow-up-right", className }:
       onHoverStart={boop}
       className={`inline-flex min-h-11 items-center gap-1.5 transition-colors duration-150 hover:text-ink md:min-h-10 ${className ?? ""}`}
     >
-      <span className="underline decoration-1 underline-offset-4 [a:hover_&]:decoration-accent-fill [a:hover_&]:decoration-2">
+      <span className="link-paint underline decoration-1 underline-offset-4">
         {children}
       </span>
       <BoopIcon name={icon} size={16} isBooped={isBooped} />

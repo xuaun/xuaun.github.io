@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ToggleButton } from "react-aria-components";
 import portrait from "../assets/portrait.webp";
 import { profile, type Content, type SectionId } from "../content/types";
-import { useBoop, useTheme } from "../lib/hooks";
+import { useTheme } from "../lib/hooks";
 import { BoopLink } from "./BoopLink";
 import { useBurst } from "./Burst";
 import { Icon } from "./Icon";
@@ -94,17 +94,12 @@ function ThemeToggle({ label }: { label: string }) {
 }
 
 function Portrait({ alt }: { alt: string }) {
-  const [isBooped, boop] = useBoop(200);
-
   return (
-    <motion.img
+    <img
       src={portrait}
       alt={alt}
       width={96}
       height={96}
-      onHoverStart={boop}
-      animate={isBooped ? { rotate: -8, scale: 1.06 } : { rotate: 0, scale: 1 }}
-      transition={{ type: "spring", stiffness: 260, damping: 9 }}
       className="size-24 shrink-0 rounded-full bg-white shadow-raised md:size-20 lg:size-[4.5rem]"
     />
   );
@@ -122,7 +117,7 @@ export function Sidebar({ content, active }: { content: Content; active: Section
         {/* Stacked where the column is narrow, side by side once the name fits next to the portrait. */}
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
           <Portrait alt={hero.portraitAlt} />
-          <h1 className="text-[clamp(2rem,4.4vw,2.375rem)] font-extrabold tracking-tight">
+          <h1 className="text-[clamp(2rem,4.4vw,2.375rem)] font-extrabold tracking-tight [view-transition-name:site-name]">
           <span className="relative inline-block">
             {hero.name}
             <svg

@@ -8,7 +8,7 @@ import { Sidebar } from "./components/Sidebar";
 import { Sky } from "./components/Sky";
 import type { Route } from "./content";
 import type { Content, SectionId } from "./content/types";
-import { useActiveSection, useScrollReveal } from "./lib/hooks";
+import { useActiveSection, usePaintOnView, useScrollReveal } from "./lib/hooks";
 
 const sectionBody: Record<SectionId, ComponentType<{ content: Content }>> = {
   about: About,
@@ -21,6 +21,7 @@ const sectionBody: Record<SectionId, ComponentType<{ content: Content }>> = {
 
 function Home({ content }: { content: Content }) {
   useScrollReveal();
+  usePaintOnView();
   const sectionIds = useMemo(() => content.nav.map((item) => item.id), [content.nav]);
   const active = useActiveSection(sectionIds);
 

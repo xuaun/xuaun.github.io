@@ -3,6 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Button } from "react-aria-components";
 import { profile, type Content, type Role } from "../content/types";
 import { BoopLink } from "./BoopLink";
+import { withMarks } from "../lib/marks";
 import { useBurst } from "./Burst";
 import { Icon } from "./Icon";
 
@@ -28,7 +29,7 @@ export function About({ content }: { content: Content }) {
     <>
       <div className="max-w-prose space-y-4">
         {about.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+          <p key={paragraph}>{withMarks(paragraph)}</p>
         ))}
       </div>
       <p className="mt-8 flex flex-wrap gap-3">

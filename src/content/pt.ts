@@ -55,9 +55,9 @@ export const pt: Content = {
   about: {
     heading: "Sobre",
     paragraphs: [
-      "Sou Especialista em Acessibilidade Digital e moro em São Carlos, SP. Faço auditorias manuais e automatizadas, testo com NVDA, JAWS, VoiceOver e TalkBack e transformo o que encontro em especificações de correção e critérios de aceite que os times de desenvolvimento conseguem executar.",
-      "Também sou desenvolvedor front-end. Trabalho com React, TypeScript, HTML e CSS, então minhas recomendações já vêm com a marcação semântica, o ARIA e o gerenciamento de foco necessários para implementá-las.",
-      "Minha trajetória vem da pesquisa com comunidades surdas. Sou mestre em Educação Especial, fluente em Libras e já apoiei a acessibilidade de produtos da Lenovo, do Duolingo e de um banco brasileiro.",
+      "Sou Especialista em Acessibilidade Digital e moro em São Carlos, SP. Faço auditorias manuais e automatizadas, testo com NVDA, JAWS, VoiceOver e TalkBack e transformo o que encontro em ==especificações de correção e critérios de aceite== que os times de desenvolvimento conseguem executar.",
+      "Também sou desenvolvedor front-end. Trabalho com React, TypeScript, HTML e CSS, então minhas recomendações já vêm com ==a marcação semântica, o ARIA e o gerenciamento de foco== necessários para implementá-las.",
+      "Minha trajetória vem da pesquisa com comunidades surdas. Sou mestre em Educação Especial, ==fluente em Libras== e já apoiei a acessibilidade de produtos da Lenovo, do Duolingo e de um banco brasileiro.",
     ],
   },
   experience: {

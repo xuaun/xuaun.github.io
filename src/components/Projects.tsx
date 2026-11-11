@@ -105,7 +105,7 @@ export function Projects({ content }: { content: Content }) {
           {visible.map((project) => (
             <motion.li
               key={project.id}
-              layout
+              layout="position"
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.94 }}

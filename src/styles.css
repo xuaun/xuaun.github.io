@@ -19,6 +19,7 @@
   --accent-fill: oklch(0.72 0.19 52);
   --accent-soft: oklch(0.95 0.035 65);
   --on-accent-fill: oklch(0.2 0.03 50);
+  --highlight: color-mix(in oklch, var(--accent-fill) 34%, transparent);
   /* The whole stacking scale. Nothing else on the site sets a z-index. */
   --z-bar: 10;
   --z-overlay: 20;
@@ -241,7 +242,7 @@
 }
 
 @page {
-  margin: 14mm;
+  margin: 12mm 14mm;
 }
 
 /* ---------- Sky: the one gradient on the page ---------- */
@@ -448,5 +449,61 @@
 @keyframes scroll-progress {
   from {
     scale: 0 1;
+  }
+}
+
+/* ---------- Highlighter: key phrases painted in once, links painted on hover ---------- */
+
+mark.paint {
+  margin-inline: -0.12em;
+  padding-inline: 0.12em;
+  border-radius: 3px;
+  color: inherit;
+  background: linear-gradient(var(--highlight), var(--highlight)) 0 88% / 100% 0.6em no-repeat;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.link-paint {
+  background: linear-gradient(var(--highlight), var(--highlight)) 0 100% / 0% 100% no-repeat;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:hover .link-paint {
+    background-size: 100% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .js mark.paint {
+    transition: background-size 800ms var(--ease-out-quart) 150ms;
+  }
+
+  .js mark.paint:not([data-paint="in"]) {
+    background-size: 0% 0.6em;
+  }
+
+  .link-paint {
+    transition: background-size 250ms var(--ease-out-quart);
+  }
+
+  /* The brush stroke under a section heading draws itself as the heading arrives. */
+  .brush-rule[data-reveal]::after {
+    transition: clip-path 800ms var(--ease-out-quart) 200ms;
+  }
+
+  .brush-rule[data-reveal="out"]::after {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  /* Language switch and portfolio <-> résumé cross-fade instead of blinking. */
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+@media print {
+  mark.paint {
+    background: none;
   }
 }

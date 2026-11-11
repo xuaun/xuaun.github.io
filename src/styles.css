@@ -1,0 +1,452 @@
+@import "tailwindcss";
+@import "@fontsource-variable/atkinson-hyperlegible-next";
+@import "@fontsource-variable/bricolage-grotesque";
+
+/*
+ * Colour tokens. One accent (the orange from the portrait) plus warm neutrals.
+ * `--accent` is the text-safe orange (>= 4.5:1 on --bg and --surface);
+ * `--accent-fill` is the brand orange, used only behind dark ink or as decoration.
+ */
+:root {
+  color-scheme: light;
+  --bg: oklch(0.985 0.005 75);
+  --surface: oklch(1 0 0);
+  --ink: oklch(0.24 0.012 60);
+  --muted: oklch(0.44 0.012 60);
+  --line: oklch(0.88 0.008 70);
+  --line-strong: oklch(0.56 0.012 65);
+  --accent: oklch(0.5 0.15 45);
+  --accent-fill: oklch(0.72 0.19 52);
+  --accent-soft: oklch(0.95 0.035 65);
+  --on-accent-fill: oklch(0.2 0.03 50);
+  /* The whole stacking scale. Nothing else on the site sets a z-index. */
+  --z-bar: 10;
+  --z-overlay: 20;
+  --z-skip: 30;
+  /* Dawn sky behind the top of the page; the darkest stop still gives body text > 4.5:1. */
+  --sky-1: oklch(0.925 0.06 62);
+  --sky-2: oklch(0.955 0.04 70);
+  --sky-3: oklch(0.975 0.018 75);
+  --star-opacity: 0;
+  --elevation-raised: 0 0 0 1px rgb(0 0 0 / 0.06), 0 1px 3px rgb(0 0 0 / 0.05), 0 6px 14px -6px rgb(0 0 0 / 0.08);
+  --elevation-hover: 0 0 0 1px rgb(0 0 0 / 0.1), 0 2px 5px rgb(0 0 0 / 0.07), 0 14px 26px -10px rgb(0 0 0 / 0.16);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: oklch(0.17 0.008 60);
+    --surface: oklch(0.215 0.009 60);
+    --ink: oklch(0.94 0.006 75);
+    --muted: oklch(0.74 0.01 70);
+    --line: oklch(0.31 0.008 60);
+    --line-strong: oklch(0.58 0.012 65);
+    --accent: oklch(0.8 0.14 60);
+    --accent-soft: oklch(0.27 0.04 55);
+    --sky-1: oklch(0.27 0.055 48);
+    --sky-2: oklch(0.225 0.035 52);
+    --sky-3: oklch(0.19 0.018 58);
+    --star-opacity: 1;
+    --elevation-raised: 0 0 0 1px rgb(255 255 255 / 0.09);
+    --elevation-hover: 0 0 0 1px rgb(255 255 255 / 0.2);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: oklch(0.17 0.008 60);
+  --surface: oklch(0.215 0.009 60);
+  --ink: oklch(0.94 0.006 75);
+  --muted: oklch(0.74 0.01 70);
+  --line: oklch(0.31 0.008 60);
+  --line-strong: oklch(0.58 0.012 65);
+  --accent: oklch(0.8 0.14 60);
+  --accent-soft: oklch(0.27 0.04 55);
+  --sky-1: oklch(0.27 0.055 48);
+  --sky-2: oklch(0.225 0.035 52);
+  --sky-3: oklch(0.19 0.018 58);
+  --star-opacity: 1;
+  --elevation-raised: 0 0 0 1px rgb(255 255 255 / 0.09);
+  --elevation-hover: 0 0 0 1px rgb(255 255 255 / 0.2);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-fill: var(--accent-fill);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent-fill: var(--on-accent-fill);
+  --font-sans: "Atkinson Hyperlegible Next Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  /* The one size between `sm` and `base`: labels, metadata, controls. */
+  --text-meta: 0.9375rem;
+  --text-meta--line-height: 1.5;
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-sheet: cubic-bezier(0.32, 0.72, 0, 1);
+  --shadow-raised: var(--elevation-raised);
+  --shadow-hover: var(--elevation-hover);
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+    /* A missing weight should look broken, not be faked by the browser. */
+    font-synthesis: none;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  @media (min-width: 48rem) {
+    html {
+      scroll-padding-top: 2rem;
+    }
+  }
+
+  body {
+    position: relative;
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  dd {
+    text-wrap: pretty;
+  }
+
+  /* One focus style for everything: thick, high-contrast, never removed. */
+  :focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Section targets are focusable for the skip link and nav, but show no ring. */
+  [tabindex="-1"]:focus-visible {
+    outline: none;
+  }
+
+  a,
+  button {
+    touch-action: manipulation;
+  }
+
+  ::selection {
+    background-color: var(--accent-fill);
+    color: var(--on-accent-fill);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+@layer components {
+  .link {
+    color: var(--accent);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .link:hover {
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  /*
+   * Scroll reveal as progressive enhancement. `.reveal` content is visible by
+   * default; useScrollReveal() marks only below-the-fold elements as "out" and
+   * flips them to "in" once, so nothing is ever left half-faded at rest and
+   * the page reads normally without JavaScript or with reduced motion.
+   */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal[data-reveal] {
+      transition:
+        opacity 500ms ease-out,
+        translate 600ms var(--ease-out-quart);
+    }
+
+    .reveal[data-reveal="out"] {
+      opacity: 0;
+      translate: 0 1rem;
+    }
+
+    .brush-draw {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: brush-draw 900ms var(--ease-out-quart) 250ms forwards;
+    }
+  }
+}
+
+@keyframes brush-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media print {
+  :root,
+  :root[data-theme="dark"] {
+    color-scheme: light;
+    --bg: white;
+    --surface: white;
+    --ink: black;
+    --muted: #333;
+    --accent: black;
+    --line: #999;
+  }
+
+  /* Never print content that was still waiting for its scroll reveal. */
+  .reveal[data-reveal] {
+    opacity: 1;
+    translate: none;
+    transition: none;
+  }
+
+  li,
+  h2,
+  h3,
+  h4 {
+    break-inside: avoid;
+  }
+
+  h2,
+  h3,
+  h4 {
+    break-after: avoid;
+  }
+}
+
+@page {
+  margin: 14mm;
+}
+
+/* ---------- Sky: the one gradient on the page ---------- */
+
+.sky {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  height: min(100dvh, 52rem);
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  /* Eased stops so the fade into the page colour does not band. */
+  background: linear-gradient(
+    to bottom,
+    var(--sky-1) 0%,
+    var(--sky-2) 22%,
+    var(--sky-3) 48%,
+    color-mix(in oklch, var(--sky-3) 45%, var(--bg)) 70%,
+    var(--bg) 100%
+  );
+}
+
+/* Stars only exist in the dark theme. They fade in once and then hold still:
+   nothing on the page loops, so there is nothing to pause. */
+.sky i {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--ink);
+  opacity: calc(var(--star-opacity) * var(--o, 0.6));
+  transition: opacity 900ms ease-out;
+}
+
+/* ---------- Brush stroke: the signature mark, taken from the portrait ---------- */
+
+.brush-rule::after {
+  content: "";
+  display: block;
+  width: 4.5rem;
+  height: 0.5rem;
+  margin-top: 0.4rem;
+  background: var(--accent-fill);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5 C 14 1, 26 7, 40 3.5 S 62 2, 70 4.5' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E")
+    center / 100% 100% no-repeat;
+}
+
+/* ---------- Pushable button: an edge that compresses on press ---------- */
+
+.pushable {
+  box-shadow: 0 3px 0 0 var(--line-strong);
+  transition:
+    translate 120ms var(--ease-out-quart),
+    box-shadow 120ms var(--ease-out-quart),
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pushable:hover:not([data-selected]) {
+    background-color: var(--accent-soft);
+  }
+}
+
+.pushable:active,
+.pushable[data-pressed] {
+  translate: 0 2px;
+  box-shadow: 0 1px 0 0 var(--line-strong);
+}
+
+/* ---------- Project card: raised surface with a cursor-following glow ---------- */
+
+.card {
+  isolation: isolate;
+  box-shadow: var(--elevation-raised);
+  transition: box-shadow 150ms ease-out;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(16rem circle at var(--glow-x, 50%) var(--glow-y, 0%), var(--accent-soft), transparent 70%);
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    box-shadow: var(--elevation-hover);
+  }
+
+  .card:hover::before {
+    opacity: 1;
+  }
+
+  .card:hover h3 a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: var(--accent-fill);
+  }
+}
+
+/* ---------- Mobile menu (React Aria modal): slides in like a sheet ---------- */
+
+.menu-overlay[data-entering] {
+  animation: fade-in 200ms ease-out;
+}
+
+.menu-overlay[data-exiting] {
+  animation: fade-in 150ms ease-out reverse;
+}
+
+.menu-panel[data-entering] {
+  animation: sheet-in 350ms var(--ease-sheet);
+}
+
+.menu-panel[data-exiting] {
+  animation: sheet-in 220ms var(--ease-sheet) reverse;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    translate: 100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Gentler, not gone: the sheet fades instead of travelling, the press keeps its shadow change. */
+  .menu-panel[data-entering],
+  .menu-panel[data-exiting] {
+    animation-name: fade-in;
+    animation-duration: 150ms;
+  }
+
+  .pushable:active,
+  .pushable[data-pressed] {
+    translate: none;
+  }
+}
+
+@media print {
+  .sky {
+    display: none;
+  }
+}
+
+/* ---------- Sidebar: stays in view beside the content ---------- */
+
+@media (min-width: 48rem) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    /* On a short window the column scrolls on its own instead of being cut off. */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+}
+
+/* ---------- Primary action: the same pushable button, filled ---------- */
+
+.pushable-primary {
+  box-shadow: 0 3px 0 0 var(--accent);
+}
+
+.pushable-primary:active {
+  box-shadow: 0 1px 0 0 var(--accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pushable.pushable-primary:hover:not([data-selected]) {
+    background-color: color-mix(in oklch, var(--accent-fill) 86%, white);
+  }
+}
+
+/* ---------- Reading progress on the phone bar ---------- */
+
+/* Driven by the scroll position itself, so it needs no JavaScript and never
+   moves unless the reader does. Browsers without scroll timelines skip it. */
+.scroll-progress {
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    display: block;
+    transform-origin: 0 50%;
+    animation: scroll-progress linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@keyframes scroll-progress {
+  from {
+    scale: 0 1;
+  }
+}

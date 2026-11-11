@@ -1,125 +1,77 @@
-# My Web Portfolio - xuaun.github.io
-## Languages
-This first section is in English. 
+# xuaun.github.io
 
-[Versão em português logo abaixo.](#portuguese)
+Portfolio of João Araujo, Digital Accessibility Specialist and Front-End Developer. Live at <https://xuaun.github.io/>.
 
-## Context
-Page created to share some of my academic and scientific projects in digital format in the areas of ```Data```, ```UX```, ```Accessibility```, and others, such as ```Web```, ```Education```, ```Robotics```, and ```Localization```.
+[Versão em português abaixo.](#português)
 
-On this page you can also find a little about my academic and professional experience, as well as ways to get in touch with me.
+## What it is
 
-## My portfolio settings and features
-On this page, you can:
-- Choose the display language
-    - English
-    - Portuguese
-- Choose between light/dark mode
-- Filter my projects by areas (such as data, UX, etc.)
-- Access from both a computer and a cell phone
-- Access other pages, such as my Linkedin, and download my CV
+A single-page portfolio in English (`/`) and Portuguese (`/pt/`), plus a printable résumé (`/cv/` and `/pt/cv/`) generated from the same data.
 
-### Display language
-Currently my portfolio is available in two languages: ```English``` (default language) and ```Portuguese```.
+## How it is built
 
-You can change the language in the side menu.
+- **React 19, TypeScript, and Vite.** Every page is prerendered to static HTML, so the content is readable before, or without, JavaScript.
+- **React Aria Components** for the interactive controls: the project filter and the theme toggle.
+- **Motion** for the animations: the section indicator, the project filter, the theme icon, and the link hover nudges.
+- **Tailwind CSS v4** with colour tokens in OKLCH, defined in `src/styles.css`.
 
-<p align="center">
-    <img src="./images/linguas.gif" alt="Screen switching between languages: English and Portuguese" title="Languages" width="600" />
-</p>
+## Accessibility decisions
 
-### Light/dark mode
-You can switch between light and dark modes in the side menu in my portfolio.
+- Text contrast is at least 4.5:1 in both themes.
+- One focus style everywhere, 3px and never removed. A skip link is the first focusable element.
+- In-page links move keyboard focus to the target section, not only the scroll position.
+- Content is visible by default. Scroll reveals and transforms only run when the visitor has not asked for reduced motion.
+- No link opens a new tab, and no control is icon-only.
+- The language switch is a real link with `lang` and `hreflang`; each page declares its own `lang`.
 
-<p align="center">
-    <img src="./images/modos.gif" alt="Screen alternating between modes: light and dark" title="Light/dark modes" width="600" />
-</p>
+## Run it locally
 
-### Filter projects
-In both the **professional projects** section and the **other projects** section, you can filter projects by area.
+```bash
+npm install
+npm run dev
+```
 
-<p align="center">
-    <img src="./images/filtro.gif" alt="Screen with different filters applied" title="Project filters" width="600" />
-</p>
+`npm run build` type-checks, builds, and prerenders into `dist/`. Pushing to `main` deploys through `.github/workflows/deploy.yml`.
 
-### Responsiveness - Computer / Mobile
-The portfolio adapts to the screen of your device - responsiveness.
+## Edit the content
 
-<p align="center">
-    <img src="./images/celular.gif" alt="Mobile screen with home page and side menu" title="Responsive screen" width="200" />
-</p>
+All text lives in `src/content/en.ts` and `src/content/pt.ts`. Both files follow the `Content` type in `src/content/types.ts`, so a missing translation fails the build.
 
-### Other links
-In several sections of my portfolio, such as in the **contact** section, you can access other links and download my CV.
+---
 
-<p align="center">
-    <img src="./images/links.gif" alt="Screen with links, accessing Linkedin" title="Links" width="600" />
-</p>
+## Português
 
-## How to use this survey
-To access my web portfolio, access its web version at https://xuaun.github.io/.
+Portfólio de João Araujo, Especialista em Acessibilidade Digital e Desenvolvedor Front-End. No ar em <https://xuaun.github.io/pt/>.
 
-## Technologies used
-In this project, ```HTML```, ```CSS```, ```JavaScript``` were used.
+### O que é
 
-____
-<br>
+Um portfólio de página única em inglês (`/`) e português (`/pt/`), com um currículo imprimível (`/cv/` e `/pt/cv/`) gerado a partir dos mesmos dados.
 
-# <p id="portuguese">Meu Portfólio Digital - xuaun.github.io</p>
-## Contexto
-Página criada para compartilhar alguns dos meus projetos acadêmicos e científicos em formato digital nas áreas de ```Dados```, ```UX```, ```Acessibilidade``` e outros, como ```Web```, ```Educação```, ```Robótica``` e ```Localização```.
+### Como é feito
 
-Nesta página você também encontra um pouco sobre minhas trajetórias acadêmica e profissional, além de maneiras de entrar em contato.
+- **React 19, TypeScript e Vite.** Todas as páginas são pré-renderizadas em HTML estático, então o conteúdo pode ser lido antes do JavaScript, ou sem ele.
+- **React Aria Components** nos controles interativos: o filtro de projetos e o alternador de tema.
+- **Motion** nas animações: o indicador de seção, o filtro de projetos, o ícone de tema e o movimento dos links ao passar o mouse.
+- **Tailwind CSS v4** com tokens de cor em OKLCH, definidos em `src/styles.css`.
 
-## Configurações e características do meu portfólio
-Nesta página, é possível:
-- Escolher a língua de exibição
-    - Português
-    - Inglês
-- Escolher entre modo claro/escuro
-- Filtrar meus projetos por áreas (como dados, ux, etc.)
-- Acessar tanto pelo computador, quanto pelo celular
-- Acessar outras páginas, como meu Linkedin, e baixar meu cv
+### Decisões de acessibilidade
 
-### Língua de exibição
-Atualmente meu portfólio conta com duas línguas de exibição: ```Inglês``` (língua principal) e ```Português```.
+- O contraste de texto é de pelo menos 4,5:1 nos dois temas.
+- Um único estilo de foco, de 3px, nunca removido. O link de pular é o primeiro elemento focável.
+- Os links internos levam o foco do teclado até a seção de destino, e não só a rolagem.
+- O conteúdo é visível por padrão. As revelações ao rolar e os movimentos só acontecem quando a pessoa não pediu movimento reduzido.
+- Nenhum link abre em nova aba e nenhum controle é só ícone.
+- A troca de idioma é um link de verdade, com `lang` e `hreflang`; cada página declara o próprio `lang`.
 
-Você pode trocar a língua de exibição no menu lateral.
+### Rodar localmente
 
-<p align="center">
-  <img src="./images/linguas.gif" alt="Tela alternando entre línguas: inglês e português" title="Línguas de exibição" width="600" />
-</p>
+```bash
+npm install
+npm run dev
+```
 
-### Modo claro/escuro
-Você pode alternar entre os modos claro e escuro pelo menu lateral no meu portfólio.
+`npm run build` verifica os tipos, gera o build e pré-renderiza em `dist/`. Um push na `main` publica pelo `.github/workflows/deploy.yml`.
 
-<p align="center">
-  <img src="./images/modos.gif" alt="Tela alternando entre modos: claro e escuro" title="Modos claro/escuro" width="600" />
-</p>
+### Editar o conteúdo
 
-### Filtrar projetos
-Tanto na seção de **projetos profissionais**, quanto na seção de **outros projetos**, é possível filtrar os projetos por área.
-
-<p align="center">
-  <img src="./images/filtro.gif" alt="Tela com aplicação de diferentes filtros" title="Filtros de projetos" width="600" />
-</p>
-
-### Responsividade - Computador / Celular
-O portfólio se adequa à tela do seu dispositivo - responsividade.
-
-<p align="center">
-  <img src="./images/celular.gif" alt="Tela de celular com página home e menu lateral" title="Tela responsiva" width="200" />
-</p>
-
-### Outros links
-Em vários trechos do meu portfólio, como na seção **contato**, é possível acessar outros links e baixar meu cv.
-
-<p align="center">
-  <img src="./images/links.gif" alt="Tela com links, é acessado o Linkedin" title="Links" width="600" />
-</p>
-
-## Instruções de uso
-Para acessar meu portfólio digital, acesse sua versão web em [https://xuaun.github.io/](https://xuaun.github.io/pt/index.html).
-
-## Tecnologias utilizadas
-Neste projeto, foi utilizado ```HTML```, ```CSS```, ```JavaScript```.
+Todo o texto fica em `src/content/en.ts` e `src/content/pt.ts`. Os dois arquivos seguem o tipo `Content` em `src/content/types.ts`, então uma tradução faltando quebra o build.

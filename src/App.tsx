@@ -2,6 +2,7 @@ import { MotionConfig } from "motion/react";
 import { useMemo, type ComponentType } from "react";
 import { Cv } from "./components/Cv";
 import { MobileMenu } from "./components/MobileMenu";
+import { NotFound } from "./components/NotFound";
 import { Projects } from "./components/Projects";
 import { About, Contact, Education, Experience, Section, Skills } from "./components/Sections";
 import { Sidebar } from "./components/Sidebar";
@@ -64,7 +65,7 @@ export function App({ route }: { route: Route }) {
         {content.ui.skipToContent}
       </a>
       <Sky />
-      {view === "cv" ? <Cv content={content} /> : <Home content={content} />}
+      {view === "notFound" ? <NotFound /> : view === "cv" ? <Cv content={content} /> : <Home content={content} />}
     </MotionConfig>
   );
 }

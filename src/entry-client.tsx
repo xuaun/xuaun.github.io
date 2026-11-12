@@ -1,11 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { App } from "./App";
-import { routeForPath } from "./content";
+import { notFoundRoute, routeForPath } from "./content";
 import "./styles.css";
 
 const container = document.getElementById("root")!;
-const route = routeForPath(window.location.pathname);
+// The 404 page is served at whatever address was requested, so it is marked in the HTML instead.
+const route = document.documentElement.hasAttribute("data-not-found")
+  ? notFoundRoute
+  : routeForPath(window.location.pathname);
 const app = (
   <StrictMode>
     <App route={route} />

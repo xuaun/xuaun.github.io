@@ -2,7 +2,7 @@ import { en } from "./en";
 import { pt } from "./pt";
 import type { Content } from "./types";
 
-export type View = "home" | "cv";
+export type View = "home" | "cv" | "notFound";
 
 export interface Route {
   /** URL path with a trailing slash, e.g. "/pt/cv/". */
@@ -15,6 +15,9 @@ export const routes: Route[] = [en, pt].flatMap((content): Route[] => [
   { path: content.path, view: "home", content },
   { path: `${content.path}cv/`, view: "cv", content },
 ]);
+
+/** The page GitHub Pages serves for unknown addresses. It borrows the English strings for the skip link. */
+export const notFoundRoute: Route = { path: "/404.html", view: "notFound", content: en };
 
 /** Only prerendered paths are served in production; the dev server falls back to the home page for anything else. */
 export function routeForPath(pathname: string): Route {

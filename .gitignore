@@ -4,3 +4,4 @@ dist-ssr
 .DS_Store
 .sass-cache
 *.local
+.claude/

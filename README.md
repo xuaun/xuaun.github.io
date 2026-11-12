@@ -1,6 +1,6 @@
 # xuaun.github.io
 
-Portfolio of João Araujo, Digital Accessibility Specialist and Front-End Developer. Live at <https://xuaun.github.io/>.
+Portfolio of João Araujo, Digital Accessibility Specialist and Front-End Developer. Live at <https://xuaun.dev.br/>.
 
 [Versão em português abaixo.](#português)
 
@@ -41,7 +41,7 @@ All text lives in `src/content/en.ts` and `src/content/pt.ts`. Both files follow
 
 ## Português
 
-Portfólio de João Araujo, Especialista em Acessibilidade Digital e Desenvolvedor Front-End. No ar em <https://xuaun.github.io/pt/>.
+Portfólio de João Araujo, Especialista em Acessibilidade Digital e Desenvolvedor Front-End. No ar em <https://xuaun.dev.br/pt/>.
 
 ### O que é
 

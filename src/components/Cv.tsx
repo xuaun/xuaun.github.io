@@ -88,8 +88,8 @@ export function Cv({ content }: { content: Content }) {
               </a>
             </li>
             <li>
-              <a className="link" href="https://xuaun.github.io/">
-                xuaun.github.io
+              <a className="link" href={`${profile.site}/`}>
+                {profile.site.replace("https://", "")}
               </a>
             </li>
             {profile.links.slice(0, 2).map((link) => (

@@ -4,7 +4,7 @@ import { App } from "./App";
 import { alternatesOf, routes, type Route } from "./content";
 import { profile } from "./content/types";
 
-const SITE = "https://xuaun.github.io";
+const SITE = profile.site;
 
 const escapeHtml = (value: string) =>
   value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");

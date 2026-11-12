@@ -99,6 +99,8 @@ export interface Content {
 }
 
 export const profile = {
+  /** The canonical origin, without a trailing slash. */
+  site: "https://xuaun.dev.br",
   email: "joaovictor.ne@gmail.com",
   links: [
     { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/joao-victor-araujo-lima/" },

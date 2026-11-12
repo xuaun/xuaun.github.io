@@ -4,6 +4,7 @@ import { Button } from "react-aria-components";
 import { profile, type Content, type Role } from "../content/types";
 import { BoopLink } from "./BoopLink";
 import { withMarks } from "../lib/marks";
+import { springs } from "../lib/motion";
 import { useBurst } from "./Burst";
 import { Icon } from "./Icon";
 
@@ -199,7 +200,7 @@ function CopyEmail({ content }: { content: Content }) {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.5 }}
-              transition={{ type: "spring", duration: 0.3, bounce: 0.3 }}
+              transition={springs.smooth}
             >
               <Icon name={copied ? "check" : "copy"} />
             </motion.span>

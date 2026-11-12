@@ -4,13 +4,11 @@ import { ToggleButton } from "react-aria-components";
 import portrait from "../assets/portrait.webp";
 import { profile, type Content, type SectionId } from "../content/types";
 import { useTheme } from "../lib/hooks";
+import { springs } from "../lib/motion";
 import { BoopLink } from "./BoopLink";
 import { useBurst } from "./Burst";
 import { Icon } from "./Icon";
 
-const indicatorSpring = { type: "spring", duration: 0.45, bounce: 0.25 } as const;
-// Hover follows the cursor many times a minute, so it settles fast and never overshoots.
-const hoverSpring = { type: "spring", duration: 0.25, bounce: 0 } as const;
 
 function SectionNav({ content, active }: { content: Content; active: SectionId | null }) {
   const [hovered, setHovered] = useState<string | null>(null);
@@ -38,7 +36,7 @@ function SectionNav({ content, active }: { content: Content; active: SectionId |
                     aria-hidden="true"
                     className="absolute inset-y-1 left-3 right-0 bg-accent-soft"
                     style={{ borderRadius: 8 }}
-                    transition={hoverSpring}
+                    transition={springs.snappy}
                   />
                 )}
                 {isActive && (
@@ -47,7 +45,7 @@ function SectionNav({ content, active }: { content: Content; active: SectionId |
                     aria-hidden="true"
                     className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 bg-accent"
                     style={{ borderRadius: 2 }}
-                    transition={indicatorSpring}
+                    transition={springs.smooth}
                   />
                 )}
                 <span className="relative">{item.label}</span>
@@ -81,7 +79,7 @@ function ThemeToggle({ label }: { label: string }) {
             initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
             animate={{ opacity: 1, rotate: 0, scale: 1 }}
             exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
-            transition={{ type: "spring", duration: 0.4, bounce: 0.3 }}
+            transition={springs.smooth}
           >
             <Icon name={isDark ? "moon" : "sun"} />
           </motion.span>

@@ -9,6 +9,14 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!--app-head-->
+    <style>
+      /* Kept inline: ad blockers can stop this rule from applying when it sits in an external stylesheet. */
+      @media (prefers-reduced-motion: no-preference) {
+        @view-transition {
+          navigation: auto;
+        }
+      }
+    </style>
     <script>
       // Lets CSS hold scroll-triggered effects in their starting state only when scripts run.
       document.documentElement.classList.add("js");

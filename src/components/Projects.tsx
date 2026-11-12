@@ -3,12 +3,11 @@ import { useId, useState } from "react";
 import { ToggleButton, ToggleButtonGroup, type Key } from "react-aria-components";
 import type { Content, Project, ProjectTag } from "../content/types";
 import { useBoop } from "../lib/hooks";
+import { springs } from "../lib/motion";
 import { BoopIcon } from "./BoopLink";
 
 type Filter = "all" | ProjectTag;
 
-const pillSpring = { type: "spring", duration: 0.4, bounce: 0.2 } as const;
-const cardSpring = { type: "spring", duration: 0.45, bounce: 0.15 } as const;
 
 function ProjectCard({ project, tagLabels }: { project: Project; tagLabels: Record<ProjectTag, string> }) {
   const [isBooped, boop] = useBoop();
@@ -87,7 +86,7 @@ export function Projects({ content }: { content: Content }) {
                 aria-hidden="true"
                 className="absolute -inset-px border border-accent bg-accent-fill"
                 style={{ borderRadius: 999 }}
-                transition={pillSpring}
+                transition={springs.smooth}
               />
             )}
             <span className="relative">{item.label}</span>
@@ -109,7 +108,7 @@ export function Projects({ content }: { content: Content }) {
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.94 }}
-              transition={cardSpring}
+              transition={springs.smooth}
             >
               <ProjectCard project={project} tagLabels={projects.tagLabels} />
             </motion.li>

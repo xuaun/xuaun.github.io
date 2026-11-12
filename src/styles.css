@@ -195,8 +195,8 @@
     }
 
     .brush-draw {
-      stroke-dasharray: 1;
-      stroke-dashoffset: 1;
+      stroke-dasharray: 1px;
+      stroke-dashoffset: 1px;
       animation: brush-draw 900ms var(--ease-out-quart) 250ms forwards;
     }
   }
@@ -204,7 +204,7 @@
 
 @keyframes brush-draw {
   to {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 0px;
   }
 }
 
@@ -294,8 +294,6 @@
 .pushable {
   box-shadow: 0 3px 0 0 var(--line-strong);
   transition:
-    translate 120ms var(--ease-out-quart),
-    box-shadow 120ms var(--ease-out-quart),
     background-color 150ms ease,
     color 150ms ease;
 }
@@ -308,7 +306,6 @@
 
 .pushable:active,
 .pushable[data-pressed] {
-  translate: 0 2px;
   box-shadow: 0 1px 0 0 var(--line-strong);
 }
 
@@ -349,22 +346,17 @@
   }
 }
 
-/* ---------- Mobile menu (React Aria modal): slides in like a sheet ---------- */
+/* ---------- Mobile menu (React Aria modal) ---------- */
 
-.menu-overlay[data-entering] {
-  animation: fade-in 200ms ease-out;
-}
-
-.menu-overlay[data-exiting] {
-  animation: fade-in 150ms ease-out reverse;
-}
-
+/* Without a motion preference the menu only fades; the slide is added further down. */
+.menu-overlay[data-entering],
 .menu-panel[data-entering] {
-  animation: sheet-in 350ms var(--ease-sheet);
+  animation: fade-in 150ms ease-out;
 }
 
+.menu-overlay[data-exiting],
 .menu-panel[data-exiting] {
-  animation: sheet-in 220ms var(--ease-sheet) reverse;
+  animation: fade-in 120ms ease-out reverse;
 }
 
 @keyframes fade-in {
@@ -379,17 +371,34 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  /* Gentler, not gone: the sheet fades instead of travelling, the press keeps its shadow change. */
-  .menu-panel[data-entering],
-  .menu-panel[data-exiting] {
-    animation-name: fade-in;
-    animation-duration: 150ms;
+/* ---------- Everything that moves ---------- */
+
+/* Movement is opt-in: it only exists when the visitor has not asked for less of it. */
+@media (prefers-reduced-motion: no-preference) {
+  .pushable {
+    transition:
+      translate 120ms var(--ease-out-quart),
+      box-shadow 120ms var(--ease-out-quart),
+      background-color 150ms ease,
+      color 150ms ease;
   }
 
   .pushable:active,
   .pushable[data-pressed] {
-    translate: none;
+    translate: 0 2px;
+  }
+
+  .menu-panel[data-entering] {
+    animation: sheet-in 350ms var(--ease-sheet);
+  }
+
+  .menu-panel[data-exiting] {
+    animation: sheet-in 220ms var(--ease-sheet) reverse;
+  }
+
+  /* The sheet arrives first and its content follows, so the two never overlap half-drawn. */
+  .menu-panel[data-entering] .menu-content {
+    animation: fade-in 240ms ease-out 140ms backwards;
   }
 }
 
@@ -496,10 +505,6 @@ mark.paint {
     clip-path: inset(0 100% 0 0);
   }
 
-  /* Language switch and portfolio <-> résumé cross-fade instead of blinking. */
-  @view-transition {
-    navigation: auto;
-  }
 }
 
 @media print {

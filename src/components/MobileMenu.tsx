@@ -48,7 +48,7 @@ export function MobileMenu({ content, active }: { content: Content; active: Sect
         </Button>
         <ModalOverlay isDismissable className="menu-overlay fixed inset-0 z-(--z-overlay) bg-black/45">
           <Modal className="menu-panel fixed inset-y-0 right-0 w-[min(21rem,88vw)] overflow-y-auto bg-bg shadow-hover">
-            <Dialog className="flex min-h-full flex-col gap-6 p-6 outline-none">
+            <Dialog className="menu-content flex min-h-full flex-col gap-6 p-6 outline-none">
               {({ close }) => (
                 <>
                   <div className="flex items-center justify-between gap-4">

@@ -98,7 +98,7 @@ function Portrait({ alt }: { alt: string }) {
       alt={alt}
       width={96}
       height={96}
-      className="size-24 shrink-0 rounded-full bg-white shadow-raised md:size-20 lg:size-[4.5rem]"
+      className="size-24 shrink-0 rounded-full bg-surface shadow-raised md:size-20 lg:size-[4.5rem]"
     />
   );
 }

@@ -276,6 +276,17 @@
   transition: opacity 900ms ease-out;
 }
 
+/* A few stars are four-pointed sparks, and a few of those take the accent colour. */
+.sky i.spark,
+.sky i.warm-spark {
+  border-radius: 0;
+  clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+}
+
+.sky i.warm-spark {
+  background: var(--accent-fill);
+}
+
 /* ---------- Brush stroke: the signature mark, taken from the portrait ---------- */
 
 .brush-rule::after {
